@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آرڈر موصول ہو گیا</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+      background: linear-gradient(135deg, #d0f0f7, #fff);
+      text-align: center;
+      color: #1a2a44;
+      padding: 50px 20px;
+    }
+
+    .success-box {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      display: inline-block;
+      max-width: 500px;
+    }
+
+    .success-box i {
+      font-size: 60px;
+      color: #22c55e;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background-color: #2B3068;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #3e438a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="success-box">
+    <i class="fa-solid fa-circle-check"></i>
+    <h1>آرڈر کامیابی سے موصول ہو گیا!</h1>
+    <p id="message">ہمارا نمائندہ جلد ہی آپ سے رابطہ کرے گا۔</p>
+    <button class="btn" onclick="window.location.href='./index.html'">ہوم پیج پر واپس جائیں</button>
+  </div>
+
+  <script>
+    // Show customer’s name if passed in URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    if (name) {
+      document.getElementById("message").innerHTML = `محترم ${name}، ہمارا نمائندہ جلد ہی آپ سے رابطہ کرے گا۔`;
+    }
+  </script>
+</body>
+</html>
