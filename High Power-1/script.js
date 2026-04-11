@@ -101,14 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
   discounts.forEach((discount, index) => {
     const angle = index * segmentAngle;
     const label = document.createElement('div');
-    label.className = 'discount-label';
-    label.textContent = discount;
-    // position labels relative to spinner radius (~40% of width)
-    label.style.position = 'absolute';
-    label.style.left = '50%';
-    label.style.top = '50%';
-    label.style.transformOrigin = 'center';
-    label.style.transform = `rotate(${angle + segmentAngle / 2}deg) translate(40%) rotate(-${angle + segmentAngle / 2}deg)`;
+    label.className = 'absolute inset-0 w-full h-full text-center text-white font-bold text-xl flex justify-center pt-8 origin-center z-20 pointer-events-none transform transition-none';
+    label.style.transform = `rotate(${angle + segmentAngle / 2}deg)`;
+    label.innerHTML = `<span style="transform: rotate(-90deg) translateY(-5px); display: inline-block; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));">${discount}</span>`;
     spinner.appendChild(label);
   });
 
