@@ -298,9 +298,14 @@ header {
 
 @media (max-width: 992px) {
     .hero { padding-top: 5rem; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-text { text-align: center; order: 1; }
-    .hero-visual { order: -1; }
+    .hero-grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; }
+    .hero-text { display: contents; }
+    .hero-text > span.badge { order: 1; margin-bottom: 1.5rem; }
+    .hero-text > h1 { order: 2; margin-bottom: 1rem; }
+    .hero-text > p { order: 3; margin-bottom: 1.5rem; }
+    .hero-text > div { order: 4; }
+    .hero-visual { order: 5; margin: 2.5rem 0; }
+    .hero-text > a.shop-now-btn { order: 6; }
     .order-wrapper { grid-template-columns: 1fr; }
     .nav-links { display: none; }
 }
