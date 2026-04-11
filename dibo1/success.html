@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرڈر موصول ہو گیا</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-emerald: #064e3b;
+            --accent-gold: #d4af37;
+            --bg-cream: #fdfdfb;
+        }
+
+        body {
+            font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+            background: var(--bg-cream);
+            background-image: radial-gradient(circle at 20% 20%, rgba(6, 78, 59, 0.05) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .success-card {
+            background: white;
+            border-radius: 3rem;
+            padding: 4rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            border-top: 8px solid var(--primary-emerald);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: #f0fdf4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .icon-wrapper i {
+            font-size: 50px;
+            color: #10b981;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-emerald);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #4b5563;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            background: linear-gradient(to right, var(--primary-emerald), var(--primary-forest, #065f46));
+            color: white;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(6, 78, 59, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(6, 78, 59, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-card">
+        <div class="icon-wrapper">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>آرڈر کامیابی سے موصول ہو گیا!</h1>
+        <p id="message">ہمارا نمائندہ جلد ہی آپ سے رابطہ کرے گا۔</p>
+        <a href="index.html" class="btn">ہوم پیج پر واپس جائیں</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        if (name) {
+            document.getElementById("message").innerHTML = `محترم <strong style="color: var(--primary-emerald)">${name}</strong>، ہمارا نمائندہ جلد ہی آپ سے رابطہ کرے گا۔`;
+        }
+    </script>
+</body>
+</html>
