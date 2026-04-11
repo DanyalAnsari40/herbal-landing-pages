@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import os
+
+html_content = """<!DOCTYPE html>
 <html lang="ur" dir="rtl">
 
 <head>
@@ -316,4 +318,12 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>"""
+
+for i in range(1, 5):
+    folder_name = f"Joint relax-{i}"
+    path = os.path.join("c:\\Users\\danya\\OneDrive\\Desktop\\herbal-landing-pages", folder_name, "index.html")
+    if os.path.exists(path):
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"Updated {folder_name}")

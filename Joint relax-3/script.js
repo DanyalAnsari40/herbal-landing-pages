@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Check if order was successfully placed
         if (result.success) {
+          // ✅ Redirect to success page with name
           const name = (result.data && result.data.name) ? result.data.name : (data.name || '');
           window.location.href = "success.html?name=" + encodeURIComponent(name);
         } else {
@@ -106,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function () {
     label.style.position = 'absolute';
     label.style.left = '50%';
     label.style.top = '50%';
-    label.style.transformOrigin = 'center';
-    label.style.transform = `rotate(${angle + segmentAngle / 2}deg) translate(40%) rotate(-${angle + segmentAngle / 2}deg)`;
+    // Center the label, rotate to the slice angle, move outwards into the slice, then rotate back to stay upright
+    label.style.transform = `translate(-50%, -50%) rotate(${angle + segmentAngle / 2}deg) translateY(-115px) rotate(-${angle + segmentAngle / 2}deg)`;
     spinner.appendChild(label);
   });
 
