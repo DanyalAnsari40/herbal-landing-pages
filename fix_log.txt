@@ -1,17 +1,1 @@
-updated: B.p Fitness-1\index.html
-updated: B.p Fitness-2\index.html
-updated: B.p Fitness-3\index.html
-updated: B.p Fitness-4\index.html
-updated: dibo1\index.html
-updated: dibo2\index.html
-updated: dibo3\index.html
-updated: dibo3\landing1\index.html
-updated: dibo4\index.html
-updated: High Power-1\index.html
-updated: High Power-2\index.html
-updated: High Power-3\index.html
-updated: High Power-4\index.html
-updated: Joint relax-1\index.html
-updated: Joint relax-2\index.html
-updated: Joint relax-3\index.html
-updated: Joint relax-4\index.html
+rewrote 17 script.js files

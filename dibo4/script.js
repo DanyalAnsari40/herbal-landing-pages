@@ -47,25 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let result;
         try { result = await res.json(); } catch {
-          alert('order failed - bad server response');
           if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
           return;
         }
 
-        if (result.success) {
-          const name = (result.data && result.data.name) ? result.data.name : (data.name || '');
-          window.location.href = 'success.html?name=' + encodeURIComponent(name);
+        if (result.order) {
+          window.location.href = 'success.html?name=' + encodeURIComponent(data.name || '');
         } else {
-          let msg = result.message || 'please try again';
-          if (msg.includes('phone')) msg = 'please enter a valid phone number (e.g. 03001234567)';
-          else if (msg.includes('name')) msg = 'please enter your name';
-          else if (msg.includes('address')) msg = 'please enter your address';
-          else if (msg.includes('city')) msg = 'please select a city';
-          alert('Order failed: ' + msg);
           if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
         }
       } catch {
-        alert('Connection error - please check your internet and try again');
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
       }
     });
