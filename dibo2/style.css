@@ -370,16 +370,22 @@ section {
     font-weight: 700;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 1rem;
     border: 2px solid #edf2f7;
     border-radius: 1rem;
     font-size: 1.1rem;
     outline: none;
+    background: white;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
     border-color: var(--primary);
 }
 

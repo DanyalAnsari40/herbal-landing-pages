@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+import os
+
+BASE = r'd:\Software House pending work\herbal-landing-pages'
+
+NEW_SCRIPT = """document.addEventListener('DOMContentLoaded', function () {
 
   // Load cities into dropdown
   const citySelect = document.getElementById('city');
@@ -110,3 +114,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 3000);
   });
 });
+"""
+
+count = 0
+for root, dirs, files in os.walk(BASE):
+    for f in files:
+        if f == 'script.js':
+            p = os.path.join(root, f)
+            open(p, 'w', encoding='utf-8').write(NEW_SCRIPT)
+            count += 1
+
+open(os.path.join(BASE, 'fix_log.txt'), 'w').write('rewrote ' + str(count) + ' script.js files')

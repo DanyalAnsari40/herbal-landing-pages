@@ -257,7 +257,8 @@ header {
     text-align: right;
 }
 
-.input-group input {
+.input-group input,
+.input-group select {
     width: 100%;
     padding: 1.2rem;
     border-radius: 15px;
@@ -265,9 +266,14 @@ header {
     font-size: 1.1rem;
     text-align: right;
     transition: var(--transition);
+    background: white;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group select:focus {
     border-color: var(--primary);
     outline: none;
 }
