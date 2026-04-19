@@ -257,7 +257,8 @@ header {
     text-align: right;
 }
 
-.input-group input {
+.input-group input,
+.input-group select {
     width: 100%;
     padding: 1.2rem;
     border-radius: 15px;
@@ -265,9 +266,21 @@ header {
     font-size: 1.1rem;
     text-align: right;
     transition: var(--transition);
+    background: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23888'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5' stroke='%23888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
 }
 
-.input-group input:focus {
+.input-group select {
+    background-color: #fff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
     border-color: var(--primary);
     outline: none;
 }
