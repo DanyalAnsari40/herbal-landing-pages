@@ -6,214 +6,499 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="images/fav.jpg">
-    <title>Diabo Control - ذیابیطس کا جدید حل</title>
+    <title>Pancreas Care — آپ کی صحت، ہمارا وعدہ</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="nav-inner">
-            <div class="logo en">DIABO CONTROL</div>
-            <nav class="nav-links">
-                <a href="#features">خصوصیات</a>
-                <a href="#benefits">فوائد</a>
-                <a href="#order">آرڈر</a>
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>✦ شوگر کنٹرول</span>
+            <span>✦ لبلبے کی صحت</span>
+            <span>✦ مردانہ کمزوری دور</span>
+            <span>✦ 100% قدرتی ہربل</span>
+            <span>✦ فری ہوم ڈیلیوری</span>
+            <span>✦ پاکستان بھر دستیاب</span>
+            <span>✦ شوگر کنٹرول</span>
+            <span>✦ لبلبے کی صحت</span>
+            <span>✦ مردانہ کمزوری دور</span>
+            <span>✦ 100% قدرتی ہربل</span>
+        </div>
+    </div>
+
+    <header class="top-header">
+        <div class="header-row">
+            <div class="brand-logo en">PANCREAS <em>CARE</em></div>
+            <nav class="top-nav">
+                <a href="#promise">وعدہ</a>
+                <a href="#features">فوائد</a>
+                <a href="#journey">نتائج</a>
+                <a href="#order" class="nav-order-btn">آرڈر کریں</a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="hero reveal">
-            <div class="hero-text">
-                <h1>ذیابیطس پر <span style="color: var(--accent);">مضبوط اثر</span></h1>
-                <p>دنیا کی پہلی بایوجینک کمپلیکس جو آپ کی زندگی بدل دے اور آپ کی صحت کو بحال کرے۔</p>
-
-                <div class="promo-tag">
-                    <div class="en" style="font-size: 0.8rem; font-weight: 900; opacity: 0.9; margin-bottom: 0.5rem;">
-                        LIMITED OFFER PRICE</div>
-                    <div class="en" style="font-size: 2.5rem; font-weight: 900;">PKR 11,999/-</div>
-                    <div style="font-size: 1.1rem; font-weight: 700;">پورے پاکستان میں فری ہوم ڈیلیوری</div>
+        <section class="hero-premium reveal">
+            <div class="container">
+                <div class="hero-inner">
+                    <div>
+                        <span class="hero-eyebrow"><i class="fas fa-crown"></i> پریمیم ہربل فارمولا</span>
+                        <h1>ذیابیطس، کمزوری، تھکاوٹ — <span class="gold">ایک حل، مکمل تبدیلی</span></h1>
+                        <p class="hero-sub"><strong>Pancreas Care</strong> لبلبے کو مضبوط بناتا ہے، شوگر پر قابو دیتا ہے،
+                            <strong>مردانہ کمزوری</strong> دور کرتا ہے اور آپ کو نئی زندگی کا احساس دلاتا ہے۔ یہ صرف دوا
+                            نہیں — یہ آپ کے جسم کا قدرتی توازن بحال کرنے کا وعدہ ہے۔</p>
+                        <div class="hero-chips">
+                            <span class="hero-chip"><i class="fas fa-check"></i> مردانہ کمزوری دور</span>
+                            <span class="hero-chip"><i class="fas fa-check"></i> شوگر مستحکم</span>
+                            <span class="hero-chip"><i class="fas fa-check"></i> توانائی واپس</span>
+                            <span class="hero-chip"><i class="fas fa-check"></i> فری ڈیلیوری</span>
+                        </div>
+                        <div class="hero-cta-row">
+                            <a href="#order" class="btn-gold">ابھی آرڈر کریں</a>
+                            <a href="#journey" class="btn-ghost">نتائج دیکھیں</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="images/PRODUCT.jpg" alt="Pancreas Care Product">
+                        <div class="hero-float-badge"><i class="fas fa-award"></i> معیاری پروڈکشن</div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-box">
-                <div class="glow"></div>
-                <img src="images/PRODUCT.jpg" alt="Diabo Control Product">
+        <div class="container">
+            <div id="promise" class="promise-row reveal">
+                <div class="promise-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>آپ کی صحت، ہمارا وعدہ</h3>
+                    <p>ہر پیک معیار کی جانچ سے گزرتا ہے — آپ کو بہترین ملے</p>
+                </div>
+                <div class="promise-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>قدرت سے، سائنس کے ساتھ</h3>
+                    <p>منتخب ہربل اجزاء — بغیر نقصان دہ کیمیکل کے</p>
+                </div>
+                <div class="promise-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>پورے پاکستان میں</h3>
+                    <p>3 سے 5 دنوں میں فری ہوم ڈیلیوری، نقد ادائیگی</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Types -->
+        <section id="types" class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">آگاہی</span>
+                <h2 class="sec-title">ذیابیطس ہر جسم کو مختلف متاثر کرتی ہے</h2>
+                <p class="sec-desc">ٹائپ 1 یا ٹائپ 2 — Pancreas Care لبلبے، شوگر اور مردانہ صحت تینوں پر کام کرتا ہے۔</p>
+                <div class="dual-cards">
+                    <div class="dual-card">
+                        <h3><i class="fas fa-syringe" style="color: var(--primary);"></i> ٹائپ 1 ذیابیطس</h3>
+                        <p>انسولین کی کمی میں لبلبے کی باقی خلیوں کو متحرک کر کے شوگر کے اتار چڑھاؤ کو کم کرنے میں مدد۔</p>
+                    </div>
+                    <div class="dual-card gold-top">
+                        <h3><i class="fas fa-weight" style="color: var(--accent);"></i> ٹائپ 2 ذیابیطس</h3>
+                        <p>میٹابولزم، وزن کنٹرول، شوگر بیلنس اور مردانہ کمزوری — چاروں پر ایک ساتھ اثر۔</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Quote -->
+        <section class="sec reveal">
+            <div class="container">
+                <div class="golden-quote">
+                    <p>صحت وہ تحفہ ہے جو ایک بار کھو جائے تو سب کچھ کھو جاتا ہے — لیکن صحت واپس پانا بھی ممکن ہے، بس
+                        صحیح قدم اٹھانا ہوتا ہے۔</p>
+                    <cite>— Pancreas Care، آپ کے ساتھ ہر قدم پر</cite>
+                </div>
             </div>
         </section>
 
         <!-- Features -->
-        <section id="features" class="reveal">
-            <h2 class="title-center">خصوصیات و فوائد</h2>
+        <section id="features" class="sec reveal" style="background: white;">
+            <div class="container">
+                <span class="sec-tag">خصوصیات</span>
+                <h2 class="sec-title">جادوئی نہیں — سائنسی طور پر مؤثر</h2>
+                <p class="sec-desc">ہر فائدہ لبلبے، شوگر، مردانہ کمزوری اور اعضاء کی حفاظت کے لیے تیار کیا گیا ہے۔</p>
 
-            <div style="margin-bottom: 3rem;">
-                <img src="images/diabetes.jpg" alt="Lifestyle"
-                    style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+                <div class="feature-banner">
+                    <img src="images/pre.jpg" alt="صحت مند زندگی">
+                </div>
+
+                <div class="bento">
+                    <div class="bento-cell bento-span-2">
+                        <i class="fas fa-dna"></i>
+                        <h3>لبلبے کی خلیوں کی بحالی</h3>
+                        <p>بیٹا خلیوں کو متحرک کر کے انسولین کی قدرتی پیداوار — ذیابیطس کے علاج کی اصل بنیاد۔</p>
+                    </div>
+                    <div class="bento-cell">
+                        <i class="fas fa-tint"></i>
+                        <h3>شوگر بیلنس</h3>
+                        <p>گلوکوز مستحکم، پیاس و پیشاب معمول پر۔</p>
+                    </div>
+                    <div class="bento-cell">
+                        <i class="fas fa-male"></i>
+                        <h3>مردانہ کمزوری</h3>
+                        <p>توانائی، اعتماد اور خون کی گردش — مردانہ کمزوری دور۔</p>
+                    </div>
+                    <div class="bento-cell">
+                        <i class="fas fa-fire"></i>
+                        <h3>میٹابولزم</h3>
+                        <p>کاربوہائیڈریٹ جذب بہتر۔</p>
+                    </div>
+                    <div class="bento-cell">
+                        <i class="fas fa-kidneys"></i>
+                        <h3>گردے و آنکھیں</h3>
+                        <p>اعضاء کی حفاظت۔</p>
+                    </div>
+                    <div class="bento-cell bento-span-2">
+                        <i class="fas fa-brain"></i>
+                        <h3>اعصابی صحت و ذہنی سکون</h3>
+                        <p>ہاتھ پاؤں کی جلن، سن ہونا، تھکاوٹ اور بے چینی — Pancreas Care ان سب پر قابو پانے میں آپ کا
+                            ساتھی ہے۔</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="grid-auto">
-                <div class="card-pos">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>انسولین کی استحکام</h3>
-                    <p>انسولین کی پیداوار کو بڑھاتا ہے اور جسم میں فاسفورس کی سطح کو معمول پر لاتا ہے۔</p>
+        <!-- Results Journey -->
+        <section id="journey" class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">نتائج کا سفر</span>
+                <h2 class="sec-title">ہفتے بہ ہفتہ — تبدیلی محسوس کریں</h2>
+                <p class="sec-desc">باقاعدہ استعمال کے ساتھ مریضوں نے یہ تبدیلیاں نوٹ کی ہیں۔</p>
+                <div class="journey-grid">
+                    <div class="journey-step" data-week="ہفتہ 1">
+                        <h3>پہلی تبدیلی</h3>
+                        <p>پیاس و تھکاوٹ میں کمی، بہتر نیند کا احساس</p>
+                    </div>
+                    <div class="journey-step" data-week="ہفتہ 2-3">
+                        <h3>شوگر میں بہتری</h3>
+                        <p>خون میں گلوکوز کی سطح مستحکم ہونا شروع</p>
+                    </div>
+                    <div class="journey-step" data-week="ہفتہ 4-6">
+                        <h3>توانائی و اعتماد</h3>
+                        <p>مردانہ کمزوری کم، روزمرہ کاموں میں تازگی</p>
+                    </div>
+                    <div class="journey-step" data-week="مکمل کورس">
+                        <h3>مکمل تبدیلی</h3>
+                        <p>مستحکم شوگر، مضبوط لبلبہ، نئی زندگی</p>
+                    </div>
                 </div>
-                <div class="card-pos" style="border-top-color: #10b981;">
-                    <i class="fas fa-chart-line" style="color: #10b981;"></i>
-                    <h3>شوگر کنٹرول</h3>
-                    <p>شوگر کے زیادہ مواد سے بچاتا ہے اور خون میں گلوکوز کی سطح کو مستحکم رکھتا ہے۔</p>
-                </div>
-                <div class="card-pos" style="border-top-color: #8b5cf6;">
-                    <i class="fas fa-capsules" style="color: #8b5cf6;"></i>
-                    <h3>جگر اور لبلبہ</h3>
-                    <p>جگر اور لبلبہ کے کام کو بحال کرتا ہے اور کاربوہائیڈریٹ میٹابولزم کو معمول پر لاتا ہے۔</p>
-                </div>
-                <div class="card-pos" style="border-top-color: #ec4899;">
-                    <i class="fas fa-sync-alt" style="color: #ec4899;"></i>
-                    <h3>میٹابولزم</h3>
-                    <p>میٹابولزم کو معمول بناتا ہے اور شوگر پرت کو مستحکم کرتا ہے۔</p>
+            </div>
+        </section>
+
+        <!-- Victory -->
+        <section class="sec reveal" style="background: white;">
+            <div class="container">
+                <div class="victory-split">
+                    <img src="images/young-man-images-conquest.jpg" alt="کامیابی اور صحت مند زندگی">
+                    <div class="victory-text">
+                        <span class="sec-tag">کامیابی کی کہانی</span>
+                        <h2 class="sec-title">شوگر پر قابو = زندگی پر قابو</h2>
+                        <p class="sec-desc" style="margin-bottom: 0;">جب شوگر کنٹرول میں آئے تو سب کچھ بدل جاتا ہے:</p>
+                        <ul class="victory-list">
+                            <li><i class="fas fa-check-circle"></i> روزمرہ توانائی و سرگرمی</li>
+                            <li><i class="fas fa-check-circle"></i> مردانہ کمزوری سے نجات</li>
+                            <li><i class="fas fa-check-circle"></i> ذہنی سکون و اعتماد</li>
+                            <li><i class="fas fa-check-circle"></i> خاندان کے ساتھ خوشیاں</li>
+                            <li><i class="fas fa-check-circle"></i> پیچیدگیوں سے بچاؤ</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Complications -->
-        <section class="reveal">
-            <div class="dark-box">
-                <h2 style="color: #ef4444; font-size: 2.5rem; margin-bottom: 1.5rem;">ذیابیطس کی پیچیدگیاں</h2>
-                <p style="opacity: 0.8;">ذیابیطس کو نظر انداز کرنا خطرناک ہو سکتا ہے۔ وقت پر احتیاط ہی زندگی کی ضمانت
-                    ہے۔</p>
-
-                <div class="complications-list">
-                    <div class="comp-item"><i class="fas fa-skull"></i> فالج</div>
-                    <div class="comp-item"><i class="fas fa-skull"></i> گردے فیل</div>
-                    <div class="comp-item"><i class="fas fa-skull"></i> بینائی کا کم ہونا</div>
-                    <div class="comp-item"><i class="fas fa-skull"></i> گینگرین</div>
-                    <div class="comp-item"><i class="fas fa-skull"></i> دِل کی بیماری</div>
-                    <div class="comp-item"><i class="fas fa-skull"></i> اعصابی کمزوری</div>
+        <section class="sec reveal">
+            <div class="container">
+                <div class="risk-panel">
+                    <span class="sec-tag" style="background: rgba(248,113,113,0.2); color: #fca5a5;">خبردار</span>
+                    <h2 class="sec-title">ذیابیطس کی پیچیدگیاں — وقت ضائع نہ کریں</h2>
+                    <p class="sec-desc">بغیر علاج یہ مسائل زندگی کو خطرے میں ڈال سکتے ہیں:</p>
+                    <div class="risk-layout">
+                        <div class="risk-img">
+                            <img src="images/diabetes.jpg" alt="ذیابیطس کی پیچیدگیاں">
+                            <span class="risk-badge"><i class="fas fa-exclamation-triangle"></i> خطرناک</span>
+                        </div>
+                        <div class="risk-tags">
+                            <span class="risk-tag">فالج</span>
+                            <span class="risk-tag">گردے فیل</span>
+                            <span class="risk-tag">بینائی کمزور</span>
+                            <span class="risk-tag">گینگرین</span>
+                            <span class="risk-tag">دل کی بیماری</span>
+                            <span class="risk-tag">اعصابی کمزوری</span>
+                            <span class="risk-tag">مردانہ کمزوری</span>
+                            <span class="risk-tag">جسمانی کمزوری</span>
+                            <span class="risk-tag">زخم نہ بھرنا</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Steps -->
-        <section id="benefits" class="reveal">
-            <h2 class="title-center">ذیابیطس کے خلاف 5 اہم اقدامات</h2>
+        <!-- How it works -->
+        <section id="benefits" class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">طریقہ کار</span>
+                <h2 class="sec-title">Pancreas Care کیسے کام کرتا ہے؟</h2>
+                <div class="tl">
+                    <div class="tl-item">
+                        <span class="tl-num en">1</span>
+                        <div class="tl-body">
+                            <h3>جذب — قدرتی اجزاء خون میں</h3>
+                            <p>ہربل ایکسٹریکٹ لبلبے اور جگر تک پہنچتے ہیں۔</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-num en">2</span>
+                        <div class="tl-body">
+                            <h3>متحرک — لبلبے کی خلیوں کو طاقت</h3>
+                            <p>انسولین کی پیداوار بہتر بنائی جاتی ہے۔</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-num en">3</span>
+                        <div class="tl-body">
+                            <h3>متوازن — شوگر و توانائی</h3>
+                            <p>گلوکوز مستحکم، تھکاوٹ و مردانہ کمزوری کم۔</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-num en">4</span>
+                        <div class="tl-body">
+                            <h3>حفاظت — مستقبل کے لیے</h3>
+                            <p>گردے، آنکھیں، اعصاب — سب محفوظ۔</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="steps-stack">
-                <div class="step-item">
-                    <div class="step-badge">1</div>
-                    <p>لبلبہ میں بیٹا خلیوں کی پیداوار کو متحرک کرنا۔</p>
+        <!-- Compare -->
+        <section class="sec reveal" style="background: white;">
+            <div class="container">
+                <span class="sec-tag">موازنہ</span>
+                <h2 class="sec-title">Pancreas Care vs عام علاج</h2>
+                <p class="sec-desc">کیوں ہزاروں لوگ Pancreas Care پر بھروسا کرتے ہیں؟</p>
+                <div class="compare-table">
+                    <div class="compare-head">
+                        <div>خصوصیت</div>
+                        <div>عام طریقے</div>
+                        <div class="highlight">Pancreas Care</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="feat">لبلبے کی حمایت</div>
+                        <div class="no"><i class="fas fa-times"></i></div>
+                        <div class="yes"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="feat">مردانہ کمزوری</div>
+                        <div class="no"><i class="fas fa-times"></i></div>
+                        <div class="yes"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="feat">قدرتی اجزاء</div>
+                        <div class="no"><i class="fas fa-times"></i></div>
+                        <div class="yes"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="feat">اعضاء کی حفاظت</div>
+                        <div class="no"><i class="fas fa-times"></i></div>
+                        <div class="yes"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="feat">مکمل جسمانی سپورٹ</div>
+                        <div class="no"><i class="fas fa-times"></i></div>
+                        <div class="yes"><i class="fas fa-check"></i></div>
+                    </div>
                 </div>
-                <div class="step-item" style="border-right-color: #10b981;">
-                    <div class="step-badge" style="background: #10b981;">2</div>
-                    <p>میٹابولک عمل کو مکمل طور پر بحال کرنا۔</p>
+            </div>
+        </section>
+
+        <!-- Ingredients -->
+        <section class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">قدرت سے</span>
+                <h2 class="sec-title">قدرتی اجزاء کی طاقت</h2>
+                <div class="icon-grid">
+                    <div class="icon-box"><div class="circle"><i class="fas fa-seedling"></i></div><h4>جڑی بوٹیاں</h4></div>
+                    <div class="icon-box"><div class="circle"><i class="fas fa-spa"></i></div><h4>اینٹی آکسیڈنٹ</h4></div>
+                    <div class="icon-box"><div class="circle"><i class="fas fa-mortar-pestle"></i></div><h4>ہربل ایکسٹریکٹ</h4></div>
+                    <div class="icon-box"><div class="circle"><i class="fas fa-flask"></i></div><h4>معدنیات</h4></div>
+                    <div class="icon-box"><div class="circle"><i class="fas fa-leaf"></i></div><h4>قدرتی فائبر</h4></div>
                 </div>
-                <div class="step-item" style="border-right-color: #8b5cf6;">
-                    <div class="step-badge" style="background: #8b5cf6;">3</div>
-                    <p>خون میں گلوکوز کی سطح کو متوازن کرنا۔</p>
+            </div>
+        </section>
+
+        <!-- Prevention -->
+        <section class="sec reveal" style="background: white;">
+            <div class="container">
+                <span class="sec-tag">احتیاط</span>
+                <h2 class="sec-title">بہتر نتائج کے 4 سنہری اصول</h2>
+                <div class="prevent-grid">
+                    <div class="prevent-card"><span class="n en">01</span><div><strong>روزانہ ورزش</strong><p style="font-size:0.88rem;color:var(--muted);">30 منٹ چہل قدمی شوگر کم رکھتی ہے۔</p></div></div>
+                    <div class="prevent-card"><span class="n en">02</span><div><strong>صحت مند غذا</strong><p style="font-size:0.88rem;color:var(--muted);">مٹھائی کم، سبزیاں زیادہ۔</p></div></div>
+                    <div class="prevent-card"><span class="n en">03</span><div><strong>باقاعدہ چیک</strong><p style="font-size:0.88rem;color:var(--muted);">ہفتہ وار شوگر ریکارڈ رکھیں۔</p></div></div>
+                    <div class="prevent-card"><span class="n en">04</span><div><strong>مکمل کورس</strong><p style="font-size:0.88rem;color:var(--muted);">Pancreas Care باقاعدگی سے لیں۔</p></div></div>
                 </div>
-                <div class="step-item" style="border-right-color: #ec4899;">
-                    <div class="step-badge" style="background: #ec4899;">4</div>
-                    <p>پورے جسم کے مدافعتی نظام کو طاقتور بنانا۔</p>
-                </div>
-                <div class="step-item" style="border-right-color: #f97316;">
-                    <div class="step-badge" style="background: #f97316;">5</div>
-                    <p>آنکھوں اور اعصاب کی حفاظت کو یقینی بنانا۔</p>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">تجربات</span>
+                <h2 class="sec-title">وہ لوگ جو بدل چکے ہیں</h2>
+                <div class="reviews">
+                    <div class="review-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"شوگر 280 سے 140 پر آ گئی۔ مردانہ کمزوری بھی ختم ہو گئی۔ Pancreas Care نے میری زندگی بدل دی۔"</p>
+                        <span class="who">— احمد علی، فیصل آباد</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"ڈاکٹر نے شوگر کنٹرول کی تعریف کی۔ توانائی واپس آ گئی، اب روزانہ چہل قدمی کرتا ہوں۔"</p>
+                        <span class="who">— سارہ خان، ملتان</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"قدرتی ہے، کوئی سائیڈ اثر نہیں۔ فری ڈیلیوری اور فوری رابطہ — بہترین سروس۔"</p>
+                        <span class="who">— طارق محمود، پشاور</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Expert -->
-        <section class="reveal">
-            <div class="expert-layout">
-                <div class="expert-img-box">
-                    <img src="images/doctor_consulting.png" alt="Expert">
+        <section class="sec reveal" style="background: white;">
+            <div class="container">
+                <div class="expert-box">
+                    <img src="images/doctor_consulting.png" alt="ماہر ڈاکٹر">
+                    <div class="expert-info">
+                        <span class="sec-tag">ماہرین کی رائے</span>
+                        <h2 class="sec-title">ڈاکٹری تصدیق</h2>
+                        <blockquote>"پینکریاس کیئر لبلبے کی صحت، شوگر کنٹرول اور مردانہ کمزوری — تینوں پر ایک ساتھ کام
+                            کرتا ہے۔ میرے مریضوں میں نتائج حیرت انگیز ہیں۔"</blockquote>
+                        <p style="font-weight:900;color:var(--primary);">پروفیسر ڈاکٹر ابوالباسط</p>
+                        <p style="font-size:0.88rem;color:var(--muted);">ڈائریکٹر، باقائی انسٹیٹیوٹ آف ڈائیبیٹولوجی</p>
+                    </div>
                 </div>
-                <div class="expert-content">
-                    <h2 style="color: var(--primary); margin-bottom: 1.5rem;">ماہر کی رائے</h2>
-                    <p style="margin-bottom: 2rem;">"ڈیبو کنٹرول نے ذیابیطس کے علاج میں ایک نیا انقلاب برپا کر دیا ہے۔
-                        یہ نہ صرف علامات کو ختم کرتا ہے بلکہ بیماری کی جڑ پر کام کرتا ہے۔ میں اپنے مریضوں کو اس کے
-                        استعمال کا مشورہ دیتا ہوں کیونکہ اس کے نتائج حیرت انگیز ہیں۔"</p>
+            </div>
+        </section>
 
-                    <div style="border-right: 4px solid var(--accent); padding-right: 1rem;">
-                        <p style="font-weight: 900; font-size: 1.25rem;">پروفیسر ڈاکٹر ابوالباسط</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">ڈائریکٹر باقائی انسٹیٹیوٹ آف
-                            ڈائیبیٹولوجی</p>
+        <!-- FAQ -->
+        <section class="sec reveal">
+            <div class="container">
+                <span class="sec-tag">سوالات</span>
+                <h2 class="sec-title">آپ کے سوالات، ہمارے جوابات</h2>
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <h3>کیا یہ ٹائپ 1 اور 2 دونوں میں کام کرتا ہے؟</h3>
+                        <p>جی ہاں، دونوں اقسام میں لبلبے اور میٹابولزم کی مکمل حمایت۔</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>مردانہ کمزوری میں کتنا مؤثر ہے؟</h3>
+                        <p>ذیابیطس سے پیدا ہونے والی مردانہ کمزوری میں شوگر کنٹرول اور توانائی بڑھا کر نمایاں فرق آتا ہے۔</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>کتنے دن میں نتائج؟</h3>
+                        <p>عام طور پر 2-3 ہفتوں میں فرق، مکمل کورس زیادہ مؤثر۔</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>ادائیگی کا طریقہ؟</h3>
+                        <p>ڈیلیوری پر نقد (COD) — آرڈر بغیر کسی خطرے کے۔</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Spinner -->
-        <section class="spinner-luxury reveal">
-            <h2 class="title-center">ڈسکاؤنٹ وہیل گھمائیں!</h2>
-            <p style="margin-top: -2rem; color: var(--text-muted);">خصوصی رعایت حاصل کرنے کے لیے بٹن دبائیں</p>
-
-            <div class="spin-wheel-box">
-                <div class="spin-arrow">
-                    <svg viewBox="0 0 40 40">
-                        <path d="M20 0L40 40H0L20 0Z" fill="var(--accent)" />
-                    </svg>
-                </div>
-                <div id="spinner"
-                    style="background: conic-gradient(#064e3b 0% 18%, #10b981 18% 36%, #0d6d54 36% 54%, #d4af37 54% 72%, #064e3b 72% 90%, #10b981 90% 100%);">
+        <section class="sec reveal">
+            <div class="container">
+                <div class="spin-box">
+                    <span class="sec-tag">خصوصی آفر</span>
+                    <h2 class="sec-title">قسمت آزمائیں — خصوصی رعایت پائیں!</h2>
+                    <p class="sec-desc" style="text-align:center;margin:0 auto 1rem;">ایک بار گھمائیں — شاندار رعایت جیتیں۔</p>
+                    <div class="spin-wheel-box">
+                        <div class="spin-arrow"><svg viewBox="0 0 40 40"><path d="M20 0L40 40H0L20 0Z" fill="var(--accent)" /></svg></div>
+                        <div id="spinner" style="background: conic-gradient(#7f1d1d 0% 18%, #d97706 18% 36%, #991b1b 36% 54%, #fbbf24 54% 72%, #7f1d1d 72% 90%, #d97706 90% 100%);"></div>
+                    </div>
+                    <button id="spin-btn" class="btn-primary" style="max-width:280px;margin:0 auto;">ڈسکاؤنٹ حاصل کریں</button>
                 </div>
             </div>
-
-            <button id="spin-btn" class="btn-premium" style="max-width: 320px;">ڈسکاؤنٹ حاصل کریں</button>
-            <div id="result" style="margin-top: 2rem; transition: 0.5s;"></div>
         </section>
 
-        <!-- Order -->
-        <section id="order" class="form-luxury-box reveal">
-            <h2 style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">آرڈر بک کرنے کے لیے</h2>
-            <p style="opacity: 0.9;">براہ کرم نیچے دیا گیا فارم پُر کریں، ہماری ٹیم آپ سے جلد رابطہ کرے گی۔</p>
+        <div id="spin-popup" class="spin-popup" aria-hidden="true">
+            <div class="spin-popup-backdrop" id="spin-popup-backdrop"></div>
+            <div class="spin-popup-card" role="dialog" aria-labelledby="spin-popup-title">
+                <button type="button" class="spin-popup-close" id="spin-popup-close" aria-label="بند کریں">&times;</button>
+                <div class="spin-popup-icon"><i class="fas fa-gift"></i></div>
+                <h3 id="spin-popup-title">مبارک ہو!</h3>
+                <p class="spin-popup-sub" id="spin-discount-msg"></p>
+                <div class="spin-popup-prices">
+                    <p class="spin-original">اصل قیمت: <del class="en" id="spin-original-price">PKR 12,000</del></p>
+                    <p class="spin-final">رعایتی قیمت: <strong class="en" id="spin-final-price">PKR 7,500</strong></p>
+                </div>
+                <a href="#order" class="btn-primary" id="spin-popup-order">ابھی آرڈر کریں</a>
+            </div>
+        </div>
 
-            <div class="form-card">
-                <form id="orderForm">
-                    <div class="form-group">
-                        <label>آپ کا نام</label>
-                        <input type="text" name="name" placeholder="اپنا نام درج کریں" required>
-                    </div>
-                    <div class="form-group en">
-                        <label>فون نمبر</label>
-                        <input type="text" name="phone" placeholder="03XXXXXXXXX" required>
-                    </div>
-                                        <div class="form-group">
-                        <label>گھر کا پتہ</label>
-                        <input type="text" name="address" placeholder="گھر کا پتہ درج کریں" required>
-                    </div>
-                    <div class="form-group">
-                        <label>شہر منتخب کریں</label>
-                        <select name="city" id="city" required>
-                            <option value="">-- شہر منتخب کریں --</option>
-                        </select>
-                    </div>
-                    <input type="hidden" name="productName" value="Diabo Control">
-                    <button type="submit" class="btn-premium">آرڈر مکمل کریں</button>
-                </form>
+        <!-- Order -->
+        <section id="order" class="order-sec reveal">
+            <div class="container">
+                <div class="urgency-bar">
+                    <i class="fas fa-bolt"></i> محدود اسٹاک — آج آرڈر کریں، کل پچھتائیں نہ!
+                </div>
+                <h2 class="sec-title">اپنی صحت کا فیصلہ اب کریں</h2>
+                <p class="sec-desc">فارم پُر کریں — 24 گھنٹوں میں ہماری ٹیم رابطہ کرے گی۔</p>
+                <div class="form-card">
+                    <form id="orderForm" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="order-name">آپ کا نام</label>
+                                <input type="text" id="order-name" name="name" placeholder="اپنا نام درج کریں" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-phone">فون نمبر</label>
+                                <input type="tel" id="order-phone" name="phone" class="input-ltr" placeholder="03XXXXXXXXX" inputmode="tel" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-address">گھر کا پتہ</label>
+                            <input type="text" id="order-address" name="address" placeholder="گھر کا پتہ درج کریں" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">شہر منتخب کریں</label>
+                            <select name="city" id="city" required>
+                                <option value="">-- شہر منتخب کریں --</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="productName" value="Pancreas Care">
+                        <div class="form-submit">
+                            <button type="submit" class="btn-primary">آرڈر مکمل کریں — ابھی!</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 3rem; text-align: center; border-top: 1px solid #efefef;">
-        <p class="en">&copy; 2026 DIABO CONTROL. Premium Quality Herbal Care.</p>
+    <footer class="site-footer">
+        <p class="en">&copy; 2026 PANCREAS CARE — Premium Quality Herbal Care</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const obs = new IntersectionObserver((es) => {
-            es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(s => obs.observe(s));
-    </script>
 </body>
 
 </html>
