@@ -10,8 +10,28 @@
 
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="shared_style.css">
+    <style>
+        :root { --primary: #0d9488; --primary-dark: #0f766e; --light-bg: #f0fdfa; --dark: #134e4a; }
+        .hero { background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #fff 100%); }
+        .hero-grid { direction: ltr; }
+        .hero-text { direction: rtl; }
+        .price-tag { display: inline-block; background: #134e4a; color: #fff; padding: 0.6rem 1.5rem; border-radius: 12px; font-weight: 800; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .price-tag del { opacity: 0.6; margin-left: 0.5rem; }
+        .price-tag strong { color: #5eead4; margin-right: 0.5rem; }
+        .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto 2rem; }
+        .comp-card { background: #fff; border-right: 4px solid #f87171; padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); text-align: right; }
+        .comp-card i { color: #ef4444; margin-bottom: 0.5rem; font-size: 1.5rem; }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: auto; }
+        .step-card { background: #fff; padding: 2rem; border-radius: 20px; border-top: 4px solid var(--primary); box-shadow: 0 8px 24px rgba(13,148,136,0.1); text-align: right; }
+        .step-num { width: 48px; height: 48px; background: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.3rem; margin-bottom: 1rem; }
+        .doctor-row { display: flex; align-items: center; gap: 2.5rem; text-align: right; background: #fff; padding: 2.5rem; border-radius: 24px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); max-width: 900px; margin: 0 auto; }
+        .doctor-row img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); flex-shrink: 0; }
+        .features-section { background: #134e4a; color: #fff; padding: 4rem 5%; }
+        .features-section .b-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; }
+        .features-section .b-icon { color: #5eead4; }
+        @media (max-width: 768px) { .doctor-row { flex-direction: column; text-align: center; } }
+    </style>
 </head>
 
 <body>
@@ -40,9 +60,10 @@
                     <img src="images/B.p_Fitness.png" alt="Product" class="main-img">
                 </div>
                 <div class="hero-text">
-                    <span class="badge">-- قدرتی اجزاء کا شاہکار --</span>
-                    <h1 style="font-size: 2.5rem; line-height: 1.6;">بلڈ پریشر اور دل کی صحت کے لیے <br> <span
-                            style="display: inline-block; margin-top: 0.5rem;">قدرتی سپورٹ</span></h1>
+                    <span class="badge" style="background: rgba(13,148,136,0.1); border-color: #0d9488; color: #0f766e;">-- روزمرہ دل کی دیکھ بھال --</span>
+                    <h1 style="font-size: 2.5rem; line-height: 1.6;">اپنے دل کو فِٹ رکھیں <br> <span
+                            style="display: inline-block; margin-top: 0.5rem; color: #0d9488;">ہربل ویلنیس فارمولا</span></h1>
+                    <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem; line-height: 1.8;">روزانہ صبح و شام استعمال سے بلڈ پریشر، دل کی دھڑکن اور مجموعی توانائی میں بتدریج بہتری محسوس کریں۔</p>
                     <a href="#order" class="shop-now-btn" style="padding: 1.2rem 3rem; font-size: 1.1rem;">ابھی آرڈر بک
                         کریں</a>
                 </div>
@@ -50,151 +71,100 @@
         </section>
 
         <!-- Features Section -->
-        <section id="features" style="padding: 5rem 5%; background: var(--surface-bg);">
-            <div class="b-grid" style="margin-top: 0;">
+        <section id="features" class="features-section">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 3rem; font-weight: 900;">کیوں B.p Fitness؟</h2>
+            <div class="b-grid" style="margin-top: 0; max-width: 1100px; margin: 0 auto;">
                 <div class="b-card">
-                    <i class="fas fa-flask b-icon"></i>
-                    <h3>بایوجینک کمپلیکس</h3>
-                    <p>10 سال کی تحقیق اور 3 سال کی طبی آزمائش</p>
+                    <i class="fas fa-leaf b-icon"></i>
+                    <h3>100% قدرتی اجزاء</h3>
+                    <p>کوئی کیمیکل نہیں — صرف جڑی بوٹیوں کا خالص امتزاج</p>
                 </div>
                 <div class="b-card">
-                    <i class="fas fa-check-circle b-icon"></i>
-                    <h3>مکمل طور پر منظور شدہ</h3>
-                    <p>تمام طبی ٹیسٹ پاس کر چکی ہے</p>
+                    <i class="fas fa-clock b-icon"></i>
+                    <h3>آسان روزانہ استعمال</h3>
+                    <p>صرف دو بار روزانہ — بغیر کسی پیچیدگی کے</p>
                 </div>
                 <div class="b-card">
-                    <i class="fas fa-shield-alt b-icon"></i>
-                    <h3>طویل مدتی حل</h3>
-                    <p>علامات کو ختم کرتا ہے، اسباب کو حل کرتا ہے</p>
+                    <i class="fas fa-truck-fast b-icon"></i>
+                    <h3>پورے پاکستان میں ڈیلیوری</h3>
+                    <p>گھر بیٹھے آرڈر کریں، کیش آن ڈیلیوری دستیاب</p>
                 </div>
             </div>
         </section>
 
         <!-- Benefits Section -->
         <section id="benefits" class="benefits" style="padding-top: 2rem;">
-            <h2>بلڈ پریشر کنٹرول کے 4 بنیادی فائدے</h2>
+            <h2>دل کی صحت کے 4 اہم فوائد</h2>
             <div style="text-align:center; margin-bottom: 2rem;">
-                <p style="color: #888; font-style: italic;">Blood pressure monitoring</p>
+                <p style="color: #888; font-style: italic;">Heart wellness &amp; daily vitality</p>
             </div>
             <div class="b-grid">
-                <div class="b-card">
-                    <i class="fas fa-heartbeat b-icon"></i>
-                    <h3>نارمل رینج میں لانا</h3>
-                    <p>بلڈ پریشر کو بتدریج نارمل رینج کے قریب لانے میں مدد کرتا ہے</p>
+                <div class="b-card" style="border-right: 4px solid #0d9488;">
+                    <i class="fas fa-gauge-high b-icon"></i>
+                    <h3>بلڈ پریشر کنٹرول</h3>
+                    <p>مسلسل بلند بلڈ پریشر کو نارمل رینج میں واپس لانے میں معاون</p>
                 </div>
-                <div class="b-card">
-                    <i class="fas fa-tint b-icon"></i>
-                    <h3>خون کی نالیوں کی لچک</h3>
-                    <p>خون کی نالیوں کی لچک اور خون کے بہاؤ میں بہتری لاتا ہے، دل پر بوجھ کم کرتا ہے</p>
+                <div class="b-card" style="border-right: 4px solid #0d9488;">
+                    <i class="fas fa-wind b-icon"></i>
+                    <h3>بہتر سانس اور آکسیجن</h3>
+                    <p>دل تک آکسیجن کی بہتر فراہمی، سانس کی تکلیف میں کمی</p>
                 </div>
-                <div class="b-card">
-                    <i class="fas fa-heart b-icon"></i>
-                    <h3>دل کی دھڑکن متوازن</h3>
-                    <p>دل پر بوجھ کم کر کے دھڑکن کو متوازن کرنے میں مدد دیتا ہے</p>
+                <div class="b-card" style="border-right: 4px solid #0d9488;">
+                    <i class="fas fa-moon b-icon"></i>
+                    <h3>بہتر نیند</h3>
+                    <p>تناؤ کم ہو کر گہری اور آرام دہ نیند آسان ہو جاتی ہے</p>
                 </div>
-                <div class="b-card">
-                    <i class="fas fa-head-side-virus b-icon"></i>
-                    <h3>ذہنی اور جسمانی راحت</h3>
-                    <p>سر درد، چکر آنا اور بھاری پن میں واضح کمی لاتا ہے، تناؤ اور بے چینی کم کر کے ذہنی سکون میں اضافہ
-                        کرتا ہے</p>
+                <div class="b-card" style="border-right: 4px solid #0d9488;">
+                    <i class="fas fa-person-running b-icon"></i>
+                    <h3>فعال زندگی</h3>
+                    <p>تھکن کم ہو کر روزمرہ کاموں میں توانائی اور جوش واپس آتا ہے</p>
                 </div>
             </div>
         </section>
 
         <!-- Complications Section -->
-        <section id="complications" style="padding: 5rem 5%; background: var(--surface-bg);">
+        <section id="complications" style="padding: 5rem 5%; background: #f0fdfa;">
             <div class="container" style="max-width: 1200px; margin: auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-main);">بلڈ پریشر کو نظر انداز کرنے
-                    کی پیچیدگیاں</h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
-                    <span
-                        style="background: rgba(255,0,0,0.1); color: #ff4d4d; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.2rem;">دل
-                        کا دورہ</span>
-                    <span
-                        style="background: rgba(255,0,0,0.1); color: #ff4d4d; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.2rem;">اچانک
-                        فالج</span>
-                    <span
-                        style="background: rgba(255,0,0,0.1); color: #ff4d4d; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.2rem;">گردوں
-                        کی کمزوری</span>
-                    <span
-                        style="background: rgba(255,0,0,0.1); color: #ff4d4d; padding: 1rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.2rem;">بینائی
-                        پر اثر</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #134e4a;">نظر انداز کرنے کے خطرناک نتائج</h2>
+                <div class="comp-grid">
+                    <div class="comp-card"><i class="fas fa-heart-crack"></i><h4>دل کا دورہ</h4><p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">بلند BP دل کی شریانوں کو نقصان پہنچاتا ہے</p></div>
+                    <div class="comp-card"><i class="fas fa-brain"></i><h4>فالج کا خطرہ</h4><p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">دماغ کی شریانوں میں خون جم سکتا ہے</p></div>
+                    <div class="comp-card"><i class="fas fa-kidneys"></i><h4>گردے خراب</h4><p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">گردوں کی فلٹریشن متاثر ہوتی ہے</p></div>
+                    <div class="comp-card"><i class="fas fa-eye"></i><h4>بینائی کمزور</h4><p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">آنکھوں کی نالیوں پر دباؤ بڑھتا ہے</p></div>
                 </div>
-                <p
-                    style="font-size: 1.2rem; line-height: 1.8; color: var(--text-muted); max-width: 800px; margin: auto;">
-                    اگر بلڈ پریشر کو بروقت کنٹرول نہ کیا جائے تو یہ آہستہ آہستہ پورے جسم پر اثر انداز ہوتا ہے۔ B.p
-                    Fitness صحت مند لائف اسٹائل کے ساتھ بلڈ پریشر کو نارمل رکھنے میں مدد دیتا ہے۔</p>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: #555; max-width: 800px; margin: auto;">
+                    وقت پر اقدام کریں — B.p Fitness آپ کے دل کی دیکھ بھال میں قابلِ اعتماد ساتھی ہے۔</p>
             </div>
         </section>
 
         <!-- 5 Steps Section -->
-        <section id="steps" style="padding: 5rem 5%;">
+        <section id="steps" style="padding: 5rem 5%; background: #fff;">
             <div class="container" style="max-width: 1200px; margin: auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: var(--text-main);">B.p
-                    Fitness – دل اور رگوں کے لیے 5 اہم اقدامات</h2>
-                <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: auto;">
-                    <div
-                        style="background: var(--surface-bg); padding: 1.5rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary-color);">1</div>
-                        <p style="font-size: 1.1rem; margin: 0; color: var(--text-main);">خون کی نالیوں کو نرم اور مضبوط
-                            بنانے میں مدد کرتا ہے، خون کا بہاؤ بہتر بناتا ہے</p>
-                    </div>
-                    <div
-                        style="background: var(--surface-bg); padding: 1.5rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary-color);">2</div>
-                        <p style="font-size: 1.1rem; margin: 0; color: var(--text-main);">دل تک آکسیجن اور خون کی بہتر
-                            فراہمی میں مدد کرتا ہے، دل کی کارکردگی بہتر بناتا ہے</p>
-                    </div>
-                    <div
-                        style="background: var(--surface-bg); padding: 1.5rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary-color);">3</div>
-                        <p style="font-size: 1.1rem; margin: 0; color: var(--text-main);">سر درد، بھاری پن اور چکر میں
-                            واضح کمی لاتا ہے، روزمرہ زندگی کو آسان بناتا ہے</p>
-                    </div>
-                    <div
-                        style="background: var(--surface-bg); padding: 1.5rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary-color);">4</div>
-                        <p style="font-size: 1.1rem; margin: 0; color: var(--text-main);">تناؤ اور بے چینی کم کر کے ذہنی
-                            سکون میں اضافہ کرتا ہے</p>
-                    </div>
-                    <div
-                        style="background: var(--surface-bg); padding: 1.5rem; border-radius: 15px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <div style="font-size: 2rem; font-weight: 900; color: var(--primary-color);">5</div>
-                        <p style="font-size: 1.1rem; margin: 0; color: var(--text-main);">روزمرہ کے کاموں میں توانائی
-                            اور فِٹنس کو بہتر بناتا ہے، زندگی کو متحرک رکھتا ہے</p>
-                    </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #134e4a;">5 ہفتوں میں کیسے کام کرتا ہے؟</h2>
+                <div class="steps-grid">
+                    <div class="step-card"><div class="step-num">1</div><p>پہلے ہفتے: خون کی نالیوں میں لچک آنا شروع</p></div>
+                    <div class="step-card"><div class="step-num">2</div><p>دوسرے ہفتے: دل کی دھڑکن میں توازن محسوس ہو</p></div>
+                    <div class="step-card"><div class="step-num">3</div><p>تیسرے ہفتے: سر درد اور چکر میں واضح کمی</p></div>
+                    <div class="step-card"><div class="step-num">4</div><p>چوتھے ہفتے: نیند اور ذہنی سکون بہتر</p></div>
+                    <div class="step-card" style="grid-column: span 1;"><div class="step-num">5</div><p>پانچویں ہفتے: مکمل توانائی اور فعال زندگی</p></div>
                 </div>
             </div>
         </section>
 
         <!-- Expert Opinion Section -->
-        <section id="expert" style="padding: 5rem 5%; background: var(--surface-bg);">
-            <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-main);">ماہر کی رائے</h2>
-                <div
-                    style="background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); position: relative; margin-top: 5rem;">
-
-                    <div
-                        style="position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--primary-color); overflow: hidden; background: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
-                        <img src="images/doctor_consulting.png" alt="Doctor Profile"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+        <section id="expert" style="padding: 5rem 5%; background: #f0fdfa;">
+            <div class="container" style="max-width: 1000px; margin: auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #134e4a;">جرمن ماہر کی رائے</h2>
+                <div class="doctor-row">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=280&h=280&fit=crop&crop=face" alt="Dr. Stefan Becker">
+                    <div>
+                        <i class="fas fa-quote-right" style="font-size: 2rem; color: #0d9488; opacity: 0.4; margin-bottom: 1rem;"></i>
+                        <p style="font-size: 1.15rem; line-height: 2; color: #333; margin-bottom: 1.5rem;">
+                            جرمنی میں ہم پیشگی طب میں قدرتی سپورٹ کو اہمیت دیتے ہیں۔ B.p Fitness کے اجزاء دل کی رگوں اور بلڈ پریشر کے لیے سائنسی طور پر معاون ثابت ہوئے ہیں۔ میرے کلینک میں اسے استعمال کرنے والے مریضوں نے بہتر نتائج رپورٹ کیے ہیں۔
+                        </p>
+                        <h4 style="font-size: 1.5rem; color: #0d9488; font-weight: 900;">ڈاکٹر سٹیفن بیکر (Dr. Stefan Becker)</h4>
+                        <p style="color: #666; font-size: 1rem;">Herz-Kreislauf-Spezialist — München Klinik, Germany</p>
                     </div>
-
-                    <i class="fas fa-quote-right"
-                        style="position: absolute; top: -15px; right: 30px; font-size: 3rem; color: var(--primary-color); opacity: 0.5;"></i>
-
-                    <p
-                        style="font-size: 1.2rem; line-height: 2; margin-top: 2rem; margin-bottom: 2rem; color: var(--text-main);">
-                        B.p Fitness کے استعمال کے بعد، میرے مریضوں کے بلڈ پریشر اور دل کی صحت میں نمایاں بہتری دیکھنے
-                        میں آئی ہے۔ یہ جدید ہربل سپورٹ نہ صرف بلڈ پریشر کو متوازن رکھنے میں مدد دیتی ہے بلکہ دل پر بوجھ
-                        کم کر کے مجموعی صحت کو بہتر بناتی ہے۔ میں اسے ایک مؤثر اور قابلِ اعتماد حل کے طور پر تجویز کرتا
-                        ہوں۔</p>
-
-                    <h4
-                        style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.5rem; font-weight: 900;">
-                        Prof. Abul Basit</h4>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1rem;">Director,
-                        Cardiovascular & Blood Pressure Care</p>
                 </div>
             </div>
         </section>
@@ -206,39 +176,10 @@
                 <span
                     style="background: rgba(255,215,0,0.1); color: #ffd700; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: bold; margin-bottom: 1.5rem; border: 1px solid rgba(255,215,0,0.3);"><i
                         class="fas fa-gift"></i> خصوصی آفر</span>
-                <h2
-                    style="font-size: 3rem; margin-bottom: 4rem; color: var(--text-main); font-weight: 900; text-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    ڈسکاؤنٹ وہیل گھمائیں!</h2>
-
-                <div class="spinner-container"
-                    style="position: relative; width: 350px; height: 350px; margin: 0 auto; margin-bottom: 3rem; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));">
-                    <!-- Outer glowing ring -->
-                    <div
-                        style="position: absolute; inset: -15px; border-radius: 50%; background: conic-gradient(from 0deg, var(--primary-color), #20b2aa, #ffd700, var(--primary-color)); z-index: 1; opacity: 0.3; filter: blur(10px);">
-                    </div>
-                    <div
-                        style="position: absolute; inset: -10px; border-radius: 50%; background: linear-gradient(45deg, var(--primary-color), #20b2aa, #1a1a2e); z-index: 2; box-shadow: 0 0 20px rgba(0,0,0,0.8);">
-                    </div>
-
-                    <!-- The Wheel -->
-                    <div id="spinner"
-                        style="position: absolute; inset: 0; border-radius: 50%; border: 6px solid #1a1a2e; background: conic-gradient(#e94560 0deg 72deg, #0f3460 72deg 144deg, #16213e 144deg 216deg, #20b2aa 216deg 288deg, #ffd700 288deg 360deg); transition: transform 4s cubic-bezier(0.1, 0.7, 0.1, 1); z-index: 3; box-shadow: inset 0 0 30px rgba(0,0,0,0.8);">
-                    </div>
-
-                    <!-- Inner Golden Dot -->
-                    <div
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: radial-gradient(circle, #ffd700 0%, #b8860b 100%); border-radius: 50%; z-index: 5; border: 4px solid #1a1a2e; box-shadow: 0 5px 15px rgba(0,0,0,0.6);">
-                    </div>
-
-                    <!-- The Pointer overlay -->
-                    <div class="spinner-pointer"
-                        style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); z-index: 10; filter: drop-shadow(0 8px 8px rgba(0,0,0,0.6));">
-                        <svg width="50" height="60" viewBox="0 0 50 60">
-                            <path d="M25 60 L45 15 A20 20 0 0 0 5 15 Z" fill="#ffd700" stroke="#1a1a2e"
-                                stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
+                <h2 style="font-size: 3rem; margin-bottom: 2rem; color: var(--dark); font-weight: 900;">ڈسکاؤنٹ وہیل گھمائیں!</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 1rem;">نیچے بٹن دبائیں اور اپنی خصوصی رعایت جیتیں</p>
+                <p style="font-size: 0.95rem; color: #888; margin-bottom: 0.4rem;">پروڈکٹ کی قیمت</p>
+                <p style="margin-bottom: 1.5rem;"><span style="display:inline-block;background:var(--primary);color:#fff;padding:0.6rem 1.8rem;border-radius:50px;font-weight:900;font-size:1.15rem;font-family:sans-serif;">PKR 12,000/-</span></p>
 
                 <button id="spin-btn" class="shop-now-btn"
                     style="padding: 1.2rem 4rem; font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; cursor: pointer; border: none; font-family: inherit; margin-top: 1rem; box-shadow: 0 10px 20px rgba(233,69,96,0.4); border-radius: 50px;">اسپن
@@ -282,20 +223,16 @@
                     </p>
                 </div>
                 <div class="order-info" style="text-align: right;">
-                    <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 2rem;">آج ہی اپنی زندگی بدلیں</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.8; line-height: 2;">ہمارا ہربل فارمولا ہزاروں لوگوں کی
-                        زندگیوں میں مثبت تبدیلی لا چکا ہے۔ اب آپ کی باری ہے کہ آپ ایک صحت مند اور فعال مستقل کی بنیاد
-                        رکھیں۔</p>
+                    <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 2rem;">دل کی دیکھ بھال شروع کریں</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.8; line-height: 2;">گھر بیٹھے آرڈر کریں۔ کیش آن ڈیلیوری — کوئی پیشگی ادائیگی نہیں۔</p>
                     <div style="margin-top: 3rem; display: flex; gap: 2rem; justify-content: flex-end;">
-                        <div
-                            style="text-align: center; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 20px;">
+                        <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 20px;">
                             <h4 style="font-size: 1.5rem;">47K+</h4>
                             <p style="font-size: 0.8rem;">مطمئن گاہک</p>
                         </div>
-                        <div
-                            style="text-align: center; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 20px;">
-                            <h4 style="font-size: 1.5rem;">100%</h4>
-                            <p style="font-size: 0.8rem;">قدرتی اجزاء</p>
+                        <div style="text-align: center; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 20px;">
+                            <h4 style="font-size: 1.5rem;">COD</h4>
+                            <p style="font-size: 0.8rem;">کیش آن ڈیلیوری</p>
                         </div>
                     </div>
                 </div>
@@ -303,19 +240,46 @@
         </section>
     </main>
 
+    <div id="spin-modal" class="spin-modal" aria-hidden="true">
+        <div class="spin-modal-backdrop" id="spin-modal-backdrop"></div>
+        <div class="spin-modal-box">
+            <p id="spin-modal-status" class="spin-modal-status">وہیل گھوم رہی ہے...</p>
+            <div class="spinner-container spin-modal-wheel">
+                <div class="spin-ring spin-ring-blur"></div>
+                <div class="spin-ring spin-ring-border"></div>
+                <div id="spinner" class="spin-wheel"></div>
+                <div class="spin-center-dot"></div>
+                <div class="spinner-pointer"><svg width="50" height="60" viewBox="0 0 50 60"><path d="M25 60 L45 15 A20 20 0 0 0 5 15 Z" fill="#ffd700" stroke="#1a1a2e" stroke-width="3"/></svg></div>
+            </div>
+            <div id="modal-result" class="modal-result"></div>
+            <div class="spin-modal-actions">
+                <a href="#order" id="modal-order-btn" class="shop-now-btn modal-order-btn" style="display:none;">ابھی آرڈر کریں</a>
+                <button type="button" id="modal-close-btn" class="modal-close-btn" style="display:none;">بند کریں</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <style>
-        .discount-label {
-            color: white;
-            font-weight: 900;
-            font-size: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        #result.visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
+        .discount-label { color: white; font-weight: 900; font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.7); }
+        #result.visible, .modal-result.visible { opacity: 1 !important; transform: translateY(0) !important; }
+        .spin-modal { position: fixed; inset: 0; z-index: 10000; display: none; align-items: center; justify-content: center; padding: 1rem; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.35s, visibility 0.35s; }
+        .spin-modal.active { display: flex; opacity: 1; visibility: visible; pointer-events: auto; }
+        .spin-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); }
+        .spin-modal-box { position: relative; z-index: 1; background: #fff; padding: 2rem 1.5rem; border-radius: 24px; text-align: center; max-width: 420px; width: 100%; box-shadow: 0 25px 60px rgba(0,0,0,0.4); animation: spinModalPop 0.45s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes spinModalPop { from { transform: scale(0.75); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .spin-modal-status { font-size: 1.2rem; font-weight: 800; color: #0d9488; margin-bottom: 1.5rem; }
+        .spin-modal-wheel { position: relative; width: 300px; height: 300px; margin: 0 auto 1.5rem; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.35)); }
+        .spin-ring { position: absolute; border-radius: 50%; }
+        .spin-ring-blur { inset: -12px; background: conic-gradient(from 0deg, #0d9488, #20b2aa, #ffd700, #0d9488); z-index: 1; opacity: 0.35; filter: blur(8px); }
+        .spin-ring-border { inset: -8px; background: linear-gradient(45deg, #0d9488, #20b2aa, #1a1a2e); z-index: 2; }
+        .spin-wheel { position: absolute; inset: 0; border-radius: 50%; border: 6px solid #1a1a2e; background: conic-gradient(#e94560 0deg 72deg, #0f3460 72deg 144deg, #16213e 144deg 216deg, #20b2aa 216deg 288deg, #ffd700 288deg 360deg); transition: transform 4s cubic-bezier(0.1,0.7,0.1,1); z-index: 3; box-shadow: inset 0 0 30px rgba(0,0,0,0.8); }
+        .spin-center-dot { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 54px; height: 54px; background: radial-gradient(circle, #ffd700 0%, #b8860b 100%); border-radius: 50%; z-index: 5; border: 4px solid #1a1a2e; }
+        .spinner-pointer { position: absolute; top: -28px; left: 50%; transform: translateX(-50%); z-index: 10; }
+        .modal-result { font-size: 1.1rem; line-height: 1.9; color: #134e4a; opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s; background: #f0fdfa; padding: 1.25rem; border-radius: 12px; border: 2px solid #0d9488; margin-bottom: 1rem; }
+        .spin-modal-actions { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+        .modal-order-btn { padding: 1rem 2.5rem !important; font-size: 1.1rem !important; text-decoration: none; border-radius: 50px; }
+        .modal-close-btn { background: transparent; border: 2px solid #ccc; color: #666; padding: 0.6rem 1.5rem; border-radius: 50px; font-family: inherit; font-size: 0.95rem; cursor: pointer; }
     </style>
 </body>
 

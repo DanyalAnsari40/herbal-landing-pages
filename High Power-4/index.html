@@ -7,7 +7,7 @@
     <!-- Force HTTPS and prevent mixed content -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="images/fav.jpg">
-    <title>High Power - قدرتی حل</title>
+    <title>High Power - کلینیکل ویلنیس فارمولا</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,9 +15,9 @@
             theme: {
                 extend: {
                     colors: {
-                        brandGreen: '#80c342', // Herbal Destination Green
-                        brandDarkGreen: '#5a9e22',
-                        brandGold: '#c0a153'
+                        brandGreen: '#2563eb',
+                        brandDarkGreen: '#1d4ed8',
+                        brandGold: '#93c5fd'
                     }
                 }
             }
@@ -45,7 +45,7 @@
         /* Main Navigation */
         .main-nav {
             background-color: white;
-            border-bottom: 4px solid #80c342;
+            border-bottom: 4px solid #2563eb;
             position: relative;
         }
         
@@ -60,12 +60,12 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
-            border: 2px solid #80c342;
+            border: 2px solid #2563eb;
             border-top: none;
         }
 
         .logo-text {
-            color: #5a9e22;
+            color: #1d4ed8;
             font-size: 28px;
             font-weight: 900;
             letter-spacing: 1px;
@@ -79,7 +79,7 @@
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(180deg, #e6f4d5 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #ffffff 100%);
             position: relative;
             padding-bottom: 80px;
             padding-top: 40px;
@@ -96,7 +96,7 @@
 
         /* Feature Cards (Match image squares) */
         .feature-card-header {
-            background-color: #8bc34a;
+            background-color: #2563eb;
             color: white;
             text-align: center;
             padding: 12px;
@@ -114,7 +114,7 @@
 
         /* 3 Circles Section */
         .circles-section {
-            background: linear-gradient(135deg, #d3efb0 0%, #aade6c 50%, #d3efb0 100%);
+            background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #dbeafe 100%);
             padding: 60px 0;
             position: relative;
             margin-top: 40px;
@@ -157,28 +157,53 @@
         }
         
         .footer-gradient {
-            background: linear-gradient(180deg, #ffffff 0%, #80c342 100%);
+            background: linear-gradient(180deg, #ffffff 0%, #2563eb 100%);
         }
+        :root { --spin-primary: #2563eb; --spin-dark: #1d4ed8; }
+        .spin-modal { position: fixed; inset: 0; z-index: 10000; display: none; align-items: center; justify-content: center; padding: 1rem; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.35s, visibility 0.35s; }
+        .spin-modal.active { display: flex; opacity: 1; visibility: visible; pointer-events: auto; }
+        .spin-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); }
+        .spin-modal-box { position: relative; z-index: 1; background: #fff; padding: 2rem 1.5rem; border-radius: 24px; text-align: center; max-width: 420px; width: 100%; box-shadow: 0 25px 60px rgba(0,0,0,0.4); animation: spinModalPop 0.45s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes spinModalPop { from { transform: scale(0.75); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .spin-modal-status { font-size: 1.2rem; font-weight: 800; color: var(--spin-dark); margin-bottom: 1.5rem; }
+        .spin-cabinet { width: 300px; max-width: 100%; margin: 0 auto 1.5rem; background: linear-gradient(165deg, var(--spin-dark) 0%, #1a1a2e 55%, #0d0d14 100%); border-radius: 22px; padding: 10px 14px 14px; box-shadow: 0 22px 45px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.15); border: 3px solid #c0a153; position: relative; }
+        .spin-cabinet::before, .spin-cabinet::after { content: ''; position: absolute; top: 18px; width: 10px; height: 55%; background: linear-gradient(180deg, #c0a153, #8b7355); border-radius: 4px; z-index: 2; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+        .spin-cabinet::before { left: 6px; }
+        .spin-cabinet::after { right: 6px; }
+        .spin-cabinet-top { display: flex; justify-content: center; gap: 7px; padding: 4px 0 8px; position: relative; z-index: 3; }
+        .spin-cabinet-light { width: 9px; height: 9px; border-radius: 50%; background: #ffd700; box-shadow: 0 0 8px #ffd700; animation: bulbBlink 1.1s ease-in-out infinite; }
+        .spin-cabinet-light:nth-child(even) { animation-delay: 0.55s; background: #fff8dc; }
+        @keyframes bulbBlink { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.85); } }
+        .spin-cabinet-title { text-align: center; font-size: 0.75rem; font-weight: 800; color: #ffd700; letter-spacing: 2px; margin-bottom: 8px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); position: relative; z-index: 3; }
+        .spin-cabinet-window { background: radial-gradient(circle at 50% 30%, #2a2a3e 0%, #0a0a12 70%); border-radius: 14px; padding: 16px 12px 12px; border: 4px solid #3d3d52; box-shadow: inset 0 0 35px rgba(0,0,0,0.9), 0 0 0 2px var(--spin-primary); position: relative; z-index: 3; }
+        .spin-cabinet-stand { width: 55%; height: 10px; margin: 10px auto 0; background: linear-gradient(180deg, #d4af37, #8b7355); border-radius: 0 0 10px 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; z-index: 3; }
+        .spin-wheel-wrap { position: relative; width: 230px; height: 230px; margin: 0 auto; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.5)); }
+        .spin-modal-wheel { margin: 0 auto 1.5rem; }
+        .spin-modal-wheel.spin-cabinet { width: 300px; }
+        .spin-wheel-inner { position: absolute; inset: 0; z-index: 3; }
+        .spin-wheel { position: absolute; inset: 0; border-radius: 50%; border: 5px solid #ffd700; background: conic-gradient(var(--spin-primary) 0deg 72deg, var(--spin-dark) 72deg 144deg, #c0a153 144deg 216deg, #aade6c 216deg 288deg, var(--spin-primary) 288deg 360deg); transition: transform 4s cubic-bezier(0.1,0.7,0.1,1); box-shadow: inset 0 0 25px rgba(0,0,0,0.5), 0 0 12px rgba(255,215,0,0.2); }
+        .spin-center-dot { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: radial-gradient(circle, #ffd700, #b8860b); border-radius: 50%; border: 3px solid #fff; z-index: 5; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+        .spinner-pointer { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); z-index: 10; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.4)); }
+        .modal-result { font-size: 1.05rem; line-height: 1.9; opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s; background: #f0fdf4; padding: 1.25rem; border-radius: 12px; border: 2px solid var(--spin-primary); margin-bottom: 1rem; color: #333; }
+        .modal-result.visible { opacity: 1 !important; transform: translateY(0) !important; }
+        .spin-modal-actions { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+        .modal-order-btn { display: none; background: var(--spin-dark); color: #fff; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; }
+        .modal-close-btn { display: none; background: transparent; border: 2px solid #ccc; color: #666; padding: 0.5rem 1.5rem; border-radius: 50px; cursor: pointer; font-family: inherit; }
+        .clinical-grid-hp { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid #dbeafe; border-radius: 16px; overflow: hidden; }
+        .clinical-feat-hp { padding: 2rem 1.5rem; text-align: center; border-left: 1px solid #dbeafe; background: #fff; }
+        .clinical-feat-hp:first-child { border-left: none; }
+        .clinical-feat-hp i { font-size: 2rem; color: #2563eb; margin-bottom: 0.75rem; }
+        .benefit-pill-hp { display: inline-flex; align-items: center; gap: 0.6rem; background: #eff6ff; padding: 0.75rem 1.25rem; border-radius: 50px; margin: 0.35rem; font-weight: 600; color: #1e40af; font-size: 0.9rem; }
+        .comment-card-hp { background: #fff; border-radius: 16px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 16px rgba(37,99,235,0.08); border-right: 3px solid #2563eb; text-align: right; margin-bottom: 1rem; }
+        .comment-card-hp .stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .doctor-clinical-hp { display: grid; grid-template-columns: 1fr 180px; gap: 2rem; align-items: center; background: #fff; padding: 2.5rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(37,99,235,0.1); text-align: right; }
+        .doctor-clinical-hp img { width: 180px; height: 180px; border-radius: 16px; object-fit: cover; border: 3px solid #2563eb; }
+        .hero-badge-blue { display: inline-block; background: #1e40af; color: #fff; padding: 0.4rem 1.2rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+        @media (max-width: 768px) { .clinical-grid-hp { grid-template-columns: 1fr; } .clinical-feat-hp { border-left: none; border-top: 1px solid #dbeafe; } .doctor-clinical-hp { grid-template-columns: 1fr; text-align: center; } }
     </style>
 </head>
 
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar py-1">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex gap-4">
-                <a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-gray-200"><i class="fab fa-google-plus-g"></i></a>
-            </div>
-            <div class="flex gap-4 items-center">
-                <i class="fas fa-shopping-cart"></i>
-                <a href="#" class="hover:underline">Home</a> | 
-                <a href="#" class="hover:underline">Contact Us</a>
-            </div>
-        </div>
-    </div>
 
     <!-- Main Navigation -->
     <header class="main-nav shadow-sm pb-16 md:pb-4 pt-4 z-40 sticky top-0">
@@ -202,209 +227,90 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container mx-auto px-4 max-w-6xl relative z-10">
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <!-- Left Content -->
+            <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 text-center md:text-right">
-                    <p class="text-gray-500 uppercase tracking-widest text-sm mb-2 font-sans font-bold">YOUR JOURNEY TO VITALITY</p>
-                    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-gray-800 leading-tight">
-                        کمزوری، تھکن اور سستی کے خلاف <span class="text-brandGreen">طاقتور فارمولا</span>
+                    <span class="hero-badge-blue"><i class="fas fa-certificate"></i> ISO Certified Formula</span>
+                    <h1 class="text-2xl md:text-4xl font-bold mb-4 text-gray-800 leading-tight">
+                        جرمن معیار کی <span class="text-brandGreen">پروسٹیٹ ویلنیس تھراپی</span>
                     </h1>
-                    <p class="text-lg text-gray-600 mb-8">
-                        وہ لوگ جو تھوڑا سا کام کر کے بھی تھک جاتے ہیں، نیند پوری ہونے
-                        کے باوجود جسم میں جان محسوس نہیں ہوتی، اُن کے لیے High Power قدرتی توانائی کا تجربہ ہے
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        ہارمونل توازن، پیشابی صحت، جوانی کی بحالی — 100٪ قدرتی۔ 145,000 مطمئن صارفین۔ بغیر سائیڈ ایفیکٹ، بغیر آپریشن۔
                     </p>
-                    <div class="bg-white rounded-full shadow-lg p-2 flex items-center max-w-md mx-auto md:mx-0 border border-gray-200">
-                        <input type="text" placeholder="Search By Keyword" class="flex-grow px-4 outline-none text-sm text-left" dir="ltr">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-600 px-4 py-2 rounded-full transition"><i class="fas fa-chevron-right"></i></button>
-                    </div>
+                    <p class="text-base text-gray-500 mb-6">ذرا تصور کریں: مثانے، درد اور جسمانی کمزوری سے آزاد زندگی!</p>
+                    <a href="#order" class="inline-block bg-brandGreen hover:bg-brandDarkGreen text-white font-bold py-3 px-10 rounded-full shadow-lg transition">ابھی آرڈر کریں</a>
                 </div>
-                <!-- Right Image -->
                 <div class="w-full md:w-1/2 relative">
-                    <img src="images/High Power.png" alt="Herbal Ingredients" class="w-full max-w-lg mx-auto drop-shadow-2xl">
-                    <!-- Product inset -->
-                    <div class="absolute bottom-0 left-0 md:-left-10 bg-white p-4 rounded-xl shadow-xl transform rotate-[-5deg] border-2 border-brandGreen w-48">
-                        <img src="images/herbal_hero_herbs.png" alt="High Power" class="w-full rounded mb-2">
-                        <div class="bg-brandGreen text-white text-center rounded p-1">
-                            <span class="font-bold font-sans">PKR 11,999/-</span>
-                        </div>
-                    </div>
+                    <img src="images/High Power.png" alt="High Power" class="w-full max-w-lg mx-auto drop-shadow-2xl">
                 </div>
             </div>
         </div>
         <div class="curved-divider"></div>
     </section>
 
-    <!-- Featured Products / Key Features -->
-    <section id="features" class="container mx-auto px-4 max-w-6xl py-12 relative z-20 -mt-10">
-        <h2 class="text-gray-400 text-xl mb-6">قدرتی توانائی کا ذریعہ</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <!-- Box 1 -->
-            <div class="flex flex-col">
-                <div class="feature-card-header">جسمانی قوت</div>
-                <div class="feature-card-body flex flex-col justify-between">
-                    <img src="images/High Power.jpeg" alt="Product" class="h-32 object-contain mx-auto mb-4">
-                    <p class="text-xs text-gray-600 mb-4">جسم کو مضبوط بناتا ہے اور روزمرہ کے کاموں کے لیے درکار فوری توانائی فراہم کرتا ہے۔</p>
-                    <div class="flex justify-between items-center mt-auto border-t pt-2">
-                        <a href="#order" class="text-gray-500 text-xs hover:underline">Product Detail&gt;&gt;</a>
-                        <span class="bg-brandGreen text-black font-bold font-sans px-3 py-1 rounded">PKR 11,999</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 2 -->
-            <div class="flex flex-col">
-                <div class="feature-card-header">اعصابی طاقت</div>
-                <div class="feature-card-body flex flex-col justify-between">
-                    <img src="images/High Power.jpeg" alt="Product" class="h-32 object-contain mx-auto mb-4">
-                    <p class="text-xs text-gray-600 mb-4">اعصاب کو سکون بخشتا ہے اور دماغی تھکن اور کھنچاؤ سے مستقل نجات دلاتا ہے۔</p>
-                    <div class="flex justify-between items-center mt-auto border-t pt-2">
-                        <a href="#order" class="text-gray-500 text-xs hover:underline">Product Detail&gt;&gt;</a>
-                        <span class="bg-brandGreen text-black font-bold font-sans px-3 py-1 rounded">PKR 11,999</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 3 -->
-            <div class="flex flex-col">
-                <div class="feature-card-header">قوت مدافعت</div>
-                <div class="feature-card-body flex flex-col justify-between">
-                    <img src="images/High Power.jpeg" alt="Product" class="h-32 object-contain mx-auto mb-4">
-                    <p class="text-xs text-gray-600 mb-4">بیماریوں کے خلاف جسم کی قدرتی مزاحمت کو بہتر بنا کر آپ کو صحت مند رکھتا ہے۔</p>
-                    <div class="flex justify-between items-center mt-auto border-t pt-2">
-                        <a href="#order" class="text-gray-500 text-xs hover:underline">Product Detail&gt;&gt;</a>
-                        <span class="bg-brandGreen text-black font-bold font-sans px-3 py-1 rounded">PKR 11,999</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Box 4 -->
-            <div class="flex flex-col">
-                <div class="feature-card-header">بہتر میٹابولزم</div>
-                <div class="feature-card-body flex flex-col justify-between">
-                    <img src="images/High Power.jpeg" alt="Product" class="h-32 object-contain mx-auto mb-4">
-                    <p class="text-xs text-gray-600 mb-4">خوراک کو بہتر طریقے سے ہضم کرنے اور جسم کا حصہ بنانے میں مدد کرتا ہے۔</p>
-                    <div class="flex justify-between items-center mt-auto border-t pt-2">
-                        <a href="#order" class="text-gray-500 text-xs hover:underline">Product Detail&gt;&gt;</a>
-                        <span class="bg-brandGreen text-black font-bold font-sans px-3 py-1 rounded">PKR 11,999</span>
-                    </div>
-                </div>
+    <!-- Clinical Features -->
+    <section id="features" class="py-14 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-2xl font-bold text-center text-blue-800 mb-8">طبی معیار کی تین بنیادیں</h2>
+            <div class="clinical-grid-hp">
+                <div class="clinical-feat-hp"><i class="fas fa-microscope"></i><h4 class="font-bold">لیبارٹری ٹیسٹڈ</h4><p class="text-xs text-gray-500 mt-2">ہر بیچ کی سخت جانچ</p></div>
+                <div class="clinical-feat-hp"><i class="fas fa-leaf"></i><h4 class="font-bold">صفر مضر اجزاء</h4><p class="text-xs text-gray-500 mt-2">صرف قدرتی جڑی بوٹیاں</p></div>
+                <div class="clinical-feat-hp"><i class="fas fa-user-doctor"></i><h4 class="font-bold">ماہرین کی منظوری</h4><p class="text-xs text-gray-500 mt-2">جرمن ڈاکٹروں کی سفارش</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Complications / Mid Text Banner -->
-    <section class="py-8 text-center px-4">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-600 mb-4 font-sans tracking-wide">HIGH POWER HERBAL SUPPLEMENTS: AUTHENTIC FORMULAS</h2>
-        <p class="text-gray-500 max-w-3xl mx-auto mb-6 text-sm">
-            آپ اپنی عمر یا جینیات کو تبدیل نہیں کر سکتے، لیکن آپ ان بیماریوں کے ہونے کے خطرے کو کم کر سکتے ہیں۔
-            تمام قدرتی فارمولوں پر مبنی یہ علاج آپ کی صحت کی ضمانت ہے۔
-        </p>
-        
-        <h3 class="text-lg md:text-xl font-bold text-gray-600 mb-4 tracking-wide">جسمانی کمزوری اور تھکن کے اثرات</h3>
-        <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto text-gray-600 text-sm">
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">ہر وقت تھکاوٹ</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">پٹھوں میں درد</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">اعصابی کمزوری</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">نیند کی کمی</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">چڑچڑا پن</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">قوت مدافعت کی کمی</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">ذہنی دباؤ</span>
-            <span class="bg-gray-100 px-4 py-2 rounded-full border border-gray-200">کام میں دل نہ لگنا</span>
+    <!-- Benefit Pills -->
+    <section class="py-10 px-4 text-center" style="background:#eff6ff;">
+        <h2 class="text-xl font-bold text-blue-800 mb-6">High Power کے اہم فوائد</h2>
+        <div class="max-w-3xl mx-auto">
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> پروسٹیٹ صحت</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> پیشابی نظام</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> ہارمونل توازن</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> بہتر نیند</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> جوانی کی بحالی</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> ازدواجی تعلقات</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> توانائی میں اضافہ</span>
+            <span class="benefit-pill-hp"><i class="fas fa-check-circle text-blue-600"></i> بغیر سائیڈ ایفیکٹ</span>
         </div>
     </section>
 
-    <!-- Green Circles Section -->
-    <section class="circles-section z-10">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-800">
-                <!-- Circle 1 -->
+    <!-- Story -->
+    <section class="py-12 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-2xl font-bold text-brandDarkGreen mb-6 text-center">میرا دوست کیسے بدلا؟</h2>
+            <div class="bg-blue-50 rounded-2xl p-8 shadow-lg text-gray-700 leading-loose text-sm md:text-base space-y-4 border border-blue-100">
+                <p>قریبی دوست پیشابی مسائل، بے خوابی اور ازدواجی زندگی میں مایوسی سے دوچار تھا۔ ڈاکٹر جانے سے ہچکچاتا تھا۔</p>
+                <p>تحقیق کے بعد High Power ملا — ایک دن میں فرق، 3 ہفتوں میں مکمل بحالی۔ درد ختم، سکون سے نیند، زندگی کی کوالٹی واپس۔</p>
+                <p class="font-bold text-brandDarkGreen">دسیوں ہزار مرد اب اس پر بھروسہ کرتے ہیں — نہ کیمیکل، نہ آپریشن۔</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section id="benefits" class="py-14 px-4" style="background:#f8fafc;">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-2xl font-bold text-center text-blue-800 mb-2">صارفین کی رائے</h2>
+            <p class="text-center text-gray-500 text-sm mb-8">145,000+ مطمئن گاہک</p>
+            <div class="comment-card-hp"><div class="stars">★★★★★</div><p class="text-sm text-gray-700 mb-2">"3 ہفتوں میں پروسٹیٹ نارمل — رات کی نیند واپس!"</p><p class="text-xs font-bold text-blue-700">احمد علی، 62 سال، کراچی</p></div>
+            <div class="comment-card-hp"><div class="stars">★★★★★</div><p class="text-sm text-gray-700 mb-2">"پیشابی مسائل ختم، توانائی میں بہتری محسوس ہوئی۔"</p><p class="text-xs font-bold text-blue-700">طارق محمود، 55 سال، لاہور</p></div>
+            <div class="comment-card-hp"><div class="stars">★★★★☆</div><p class="text-sm text-gray-700 mb-2">"قدرتی اور محفوظ — کوئی سائیڈ ایفیکٹ نہیں۔"</p><p class="text-xs font-bold text-blue-700">راشد حسین، 48 سال، اسلام آباد</p></div>
+            <div class="comment-card-hp"><div class="stars">★★★★★</div><p class="text-sm text-gray-700 mb-2">"ازدواجی زندگی میں خوشی واپس — شکریہ High Power!"</p><p class="text-xs font-bold text-blue-700">فہد ملک، 51 سال، فیصل آباد</p></div>
+            <div class="comment-card-hp"><div class="stars">★★★★★</div><p class="text-sm text-gray-700 mb-2">"21 دن میں مکمل تبدیلی — جیسے دوبارہ جوان ہو گیا۔"</p><p class="text-xs font-bold text-blue-700">عمران صدیقی، 51 سال، لاہور</p></div>
+        </div>
+    </section>
+
+    <!-- Expert Clinical -->
+    <section id="expert" class="py-14 px-4" style="background:#eff6ff;">
+        <div class="container mx-auto max-w-4xl">
+            <div class="doctor-clinical-hp">
                 <div>
-                    <h3 class="font-sans font-bold mb-2">FREE SHIPPING</h3>
-                    <p class="text-sm font-sans mb-4">on all orders nationwide</p>
-                    <div class="circle-badge-container">
-                        <div class="circle-inner">
-                            <i class="fas fa-box circle-icon"></i>
-                            <i class="fas fa-arrow-up mt-1 text-xl"></i>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-brandDarkGreen">ماہر کی رائے</h3>
+                    <p class="text-gray-700 mb-3 leading-relaxed text-sm">بلند پروسٹیٹ ہارمونل عدم توازن اور جسمانی کمزوری کا بڑا سبب ہے۔ High Power باقاعدہ استعمال سے پروسٹیٹ مستحکم اور زندگی کی کوالٹی بہتر ہوتی ہے۔</p>
+                    <p class="text-gray-700 mb-3 leading-relaxed text-sm">قدرتی اجزاء پروسٹیٹ، مثانے اور اینڈورکرائن نظام کو بیک وقت سپورٹ کرتے ہیں۔</p>
+                    <p class="font-bold text-gray-800 font-sans">ڈاکٹر مارکس ویگنر (Dr. Markus Wagner)</p>
+                    <p class="text-sm text-gray-500">Präventivmedizin — Frankfurt am Main, Germany</p>
                 </div>
-                <!-- Circle 2 -->
-                <div>
-                    <h3 class="font-sans font-bold mb-2">EXPERT REVIEWS</h3>
-                    <p class="text-sm font-sans mb-4">& Testimonials</p>
-                    <div class="circle-badge-container">
-                        <div class="circle-inner">
-                            <i class="fas fa-comments circle-icon"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Circle 3 -->
-                <div>
-                    <h3 class="font-sans font-bold mb-2">SOCIAL</h3>
-                    <p class="text-sm font-sans mb-4">Twitter, Facebook, Youtube...</p>
-                    <div class="circle-badge-container">
-                        <div class="circle-inner">
-                            <div class="grid grid-cols-2 gap-2 text-gray-500 text-lg">
-                                <i class="fab fa-pinterest"></i>
-                                <i class="fab fa-youtube"></i>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits & Gold Standards -->
-    <section id="benefits" class="py-16 bg-white relative z-20">
-        <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-center gap-12">
-            <!-- Left Image -->
-            <div class="w-full md:w-1/3">
-                <img src="images/High Power.png" alt="High Power Product" class="w-full max-w-sm mx-auto drop-shadow-xl">
-            </div>
-            <!-- Right Content -->
-            <div class="w-full md:w-2/3">
-                <h2 class="text-2xl font-bold font-sans text-gray-700 mb-6">OUR HERBAL SUPPLEMENTS AND GOLD STANDARDS</h2>
-                <h3 class="text-xl font-bold mb-4 text-brandDarkGreen">یک پروڈکٹ - صحت اور توانائی کے 5 اہم اقدامات</h3>
-                <ul class="space-y-4 text-gray-600">
-                    <li class="flex items-start gap-3">
-                        <span class="text-gray-400 mt-1"><i class="fas fa-circle text-[8px]"></i></span>
-                        <p>جسم میں توانائی کی سطح کو فوری اور قدرتی طور پر بڑھاتا ہے۔</p>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-gray-400 mt-1"><i class="fas fa-circle text-[8px]"></i></span>
-                        <p>پٹھوں اور اعصابی نظام کو مضبوط بنا کر تھکاوٹ کا خاتمہ کرتا ہے۔</p>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-gray-400 mt-1"><i class="fas fa-circle text-[8px]"></i></span>
-                        <p>ذہنی تناؤ کم کر کے روزمرہ کے کاموں میں توجہ اور الرٹنس پیدا کرتا ہے۔</p>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-gray-400 mt-1"><i class="fas fa-circle text-[8px]"></i></span>
-                        <p>جسم کے دفاعی نظام (قوت مدافعت) کو مضبوط بناتا ہے تاکہ بیماریاں قریب نہ آئیں۔</p>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-gray-400 mt-1"><i class="fas fa-circle text-[8px]"></i></span>
-                        <p>تمام اجزاء 100٪ قدرتی ہیں اور کسی بھی قسم کے مضر اثرات سے پاک ہیں۔</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expert Opinion -->
-    <section id="expert" class="py-12 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-brandGreen flex flex-col md:flex-row items-center gap-8">
-                <div class="w-full md:w-3/4">
-                    <h3 class="text-2xl font-bold mb-4 text-brandDarkGreen">ماہر کی رائے</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">اوہ مریض جو تھوڑا سا کام کر کے بھی تھک جاتے ہیں، نیند پوری ہونے کے باوجود جسم میں جان محسوس نہیں ہوتی، اُن کے لیے High Power قدرتی توانائی کا تجربہ ہے۔ میرے مشاہدے میں وہ لوگ جو High Power کو باقاعدہ استعمال کرتے ہیں، اُن کی جسمانی توانائی، برداشت اور ذہنی توجہ میں واضح بہتری آتی ہے۔</p>
-                    <p class="text-gray-700 mb-4 leading-relaxed">High Power قدرتی اجزاء کا ایسا متوازن امتزاج ہے جو جسمانی توانائی، برداشت اور ذہنی توجہ کو بیک وقت بہتر بناتا ہے۔ باقاعدہ استعمال کے ساتھ یہ روز مرہ زندگی کو دوبارہ متحرک بنانے میں مددگار ثابت ہوتا ہے۔</p>
-                    <p class="font-bold text-gray-800 font-sans mt-4">Prof. Abul Basit, Director, BIDE</p>
-                    <p class="text-sm text-gray-500 mt-1">دوا تمام ٹیسٹ پاس کر چکی ہے اور اسے دوا کی انتظامیہ نے مکمل طور پر منظور کر لیا ہے۔</p>
-                </div>
-                <div class="w-full md:w-1/4">
-                    <img src="images/doctor_consulting.png" alt="Doctor" class="w-full h-48 w-48 object-cover rounded-full shadow-lg border-4 border-brandGreen h-48 w-48 object-cover">
-                </div>
+                <img src="images/doctor_consulting.png" alt="Dr. Markus Wagner">
             </div>
         </div>
     </section>
@@ -416,30 +322,31 @@
             
             <!-- Spinner -->
             <div class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
-                <h2 class="text-2xl font-bold text-center mb-6 text-brandDarkGreen">ڈسکاؤنٹ حاصل کریں!</h2>
-                <div class="flex flex-col items-center">
-                    <div class="spinner-container relative w-64 h-64 mx-auto mb-6 drop-shadow-2xl mt-4">
-                        <!-- Outer glowing ring -->
-                        <div class="absolute -inset-4 rounded-full opacity-30 blur-md" style="background: conic-gradient(from 0deg, #80c342, #5a9e22, #c0a153, #80c342); z-index: 1;"></div>
-                        <div class="absolute -inset-2 rounded-full border border-gray-100 shadow-xl" style="background: linear-gradient(45deg, #80c342, #5a9e22, #ffffff); z-index: 2;"></div>
-                        
-                        <!-- The Wheel -->
-                        <div id="spinner" class="spinner absolute inset-0 rounded-full border-[4px] border-white z-10 shadow-inner"
-                            style="background: conic-gradient(#80c342 0deg 72deg, #5a9e22 72deg 144deg, #c0a153 144deg 216deg, #aade6c 216deg 288deg, #80c342 288deg 360deg); transition: transform 4s cubic-bezier(0.1, 0.7, 0.1, 1);">
-                        </div>
-                        
-                        <!-- Inner Golden Dot -->
-                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full z-20 border-[3px] border-white shadow-md" style="background: radial-gradient(circle, #c0a153 0%, #aa8b3b 100%);"></div>
-
-                        <!-- The Pointer overlay -->
-                        <div class="spinner-pointer absolute -top-[20px] left-1/2 transform -translate-x-1/2 z-30 drop-shadow-lg">
-                            <svg width="40" height="50" viewBox="0 0 50 60">
-                                <path d="M25 60 L45 15 A20 20 0 0 0 5 15 Z" fill="#c0a153" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                <h2 class="text-2xl font-bold text-center mb-4 text-brandDarkGreen">ڈسکاؤنٹ وہیل گھمائیں!</h2>
+                <p class="text-center text-gray-500 mb-4 text-sm">نیچے بٹن دبائیں اور اپنی خصوصی رعایت جیتیں</p>
+                <p class="text-center text-gray-500 mb-1 text-sm">پروڈکٹ کی قیمت</p>
+                <p class="text-center mb-6"><span class="inline-block bg-blue-50 text-blue-800 font-bold font-sans px-5 py-2 rounded-full text-lg border border-brandGreen">PKR 12,000/-</span></p>
+                <div class="spin-cabinet">
+                    <div class="spin-cabinet-top" aria-hidden="true">
+                        <span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span>
+                    </div>
+                    <div class="spin-cabinet-title">★ خصوصی رعایت ★</div>
+                    <div class="spin-cabinet-window">
+                        <div class="spin-wheel-wrap">
+                            <div class="spin-wheel-inner">
+                                <div id="spinner-preview" class="spin-wheel"></div>
+                                <div class="spin-center-dot"></div>
+                                <div class="spinner-pointer">
+                                    <svg width="36" height="46" viewBox="0 0 50 60"><path d="M25 60 L45 15 A20 20 0 0 0 5 15 Z" fill="#ffd700" stroke="#fff" stroke-width="2"/></svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button id="spin-btn" class="bg-brandDarkGreen hover:bg-brandGreen text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">قسمت آزمائیں</button>
-                    <div id="result" class="mt-4 text-lg font-bold text-green-700 bg-green-50 rounded-xl p-3 opacity-0 transition-opacity"></div>
+                    <div class="spin-cabinet-stand"></div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <button id="spin-btn" class="bg-brandDarkGreen hover:bg-brandGreen text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">اسپن کریں</button>
+                    <div id="result" class="mt-4 text-base font-bold text-green-700 bg-green-50 rounded-xl p-3 opacity-0 transition-opacity max-w-sm text-center leading-relaxed"></div>
                 </div>
             </div>
 
@@ -478,6 +385,38 @@
             
         </div>
 
+        <!-- Comments Section -->
+        <section class="container mx-auto px-4 max-w-3xl mb-16">
+            <h2 class="text-2xl font-bold text-center mb-8 text-brandDarkGreen">تازہ ترین تبصرے</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-5 shadow border border-gray-100">
+                    <p class="font-bold text-sm mb-1">فہد خان</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">میں گھنٹوں بیٹھا رہتا ہوں — پروسٹیٹائٹس کا سبب۔ High Power آزمانے کا فیصلہ کیا۔ اثر اور تیزی حیران کن! قدرتی اجزاء، بغیر سائیڈ ایفیکٹ۔</p>
+                    <p class="text-xs text-gray-400 mt-2">15 منٹ پہلے</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow border border-gray-100">
+                    <p class="font-bold text-sm mb-1">نعمان علی</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">کافی عرصے سے پروسٹیٹائٹس سے لڑ رہا ہوں۔ High Power کی بدولت بڑی بہتری — تیزی سے اثر، کوئی سائیڈ ایفیکٹ نہیں۔</p>
+                    <p class="text-xs text-gray-400 mt-2">1 منٹ پہلے</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow border border-gray-100">
+                    <p class="font-bold text-sm mb-1">شاہد محمود</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">احتیاط کے طور پر High Power استعمال کیا — پروسٹیٹائٹس دوبارہ نہیں ہوا۔ نرم اور محفوظ پروڈکٹ۔</p>
+                    <p class="text-xs text-gray-400 mt-2">3 منٹ پہلے</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow border border-gray-100">
+                    <p class="font-bold text-sm mb-1">عائشہ صدیقی</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">میرے شوہر کو پروسٹیٹائٹس تھا۔ High Power دریافت کیا — اب شاذ و نادر ہی شکایت۔ ذاتی زندگی معمول پر آ گئی!</p>
+                    <p class="text-xs text-gray-400 mt-2">3 منٹ پہلے</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow border border-gray-100">
+                    <p class="font-bold text-sm mb-1">عدیل رحمان</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">درد گیا، پروسٹیٹائٹس ختم! آرڈر دو دن سے بھی کم وقت میں پہنچ گیا!</p>
+                    <p class="text-xs text-gray-400 mt-2">9 منٹ پہلے</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="text-center text-white pb-4 font-sans text-xs">
             <div class="inline-block bg-white p-4 rounded-xl shadow-lg mb-4">
@@ -493,6 +432,36 @@
                 <a href="#" class="hover:text-white">Terms of Use</a>
             </div>
         </footer>
+    </div>
+
+    <div id="spin-modal" class="spin-modal" aria-hidden="true">
+        <div class="spin-modal-backdrop" id="spin-modal-backdrop"></div>
+        <div class="spin-modal-box">
+            <p id="spin-modal-status" class="spin-modal-status">وہیل گھوم رہی ہے...</p>
+            <div class="spin-cabinet spin-modal-wheel">
+                <div class="spin-cabinet-top" aria-hidden="true">
+                    <span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span><span class="spin-cabinet-light"></span>
+                </div>
+                <div class="spin-cabinet-title">★ خصوصی رعایت ★</div>
+                <div class="spin-cabinet-window">
+                    <div class="spin-wheel-wrap">
+                        <div class="spin-wheel-inner">
+                            <div id="spinner" class="spin-wheel"></div>
+                            <div class="spin-center-dot"></div>
+                            <div class="spinner-pointer">
+                                <svg width="36" height="46" viewBox="0 0 50 60"><path d="M25 60 L45 15 A20 20 0 0 0 5 15 Z" fill="#ffd700" stroke="#fff" stroke-width="2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spin-cabinet-stand"></div>
+            </div>
+            <div id="modal-result" class="modal-result"></div>
+            <div class="spin-modal-actions">
+                <a href="#order" id="modal-order-btn" class="modal-order-btn">ابھی آرڈر کریں</a>
+                <button type="button" id="modal-close-btn" class="modal-close-btn">بند کریں</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
