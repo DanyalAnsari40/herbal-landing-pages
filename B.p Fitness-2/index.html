@@ -91,6 +91,33 @@
                 </div>
             </div>
         </section>
+   <!-- Quick Order Form Section (Duplicated Form after Hero Section) -->
+        <section class="quick-order-section" style="padding: 3rem 5%; background: rgba(0,0,0,0.03); border-bottom: 1px solid rgba(0,0,0,0.08); display: flex; justify-content: center; direction: rtl;">
+            <div style="max-width: 550px; width: 100%;" class="order-form-box-wrapper">
+                <form class="orderForm">
+                        <div class="input-group">
+                            <label>آپ کا مکمل نام</label>
+                            <input type="text" name="name" placeholder="نام درج کریں" required>
+                        </div>
+                        <div class="input-group">
+                            <label>فون نمبر</label>
+                            <input type="text" name="phone" placeholder="0300-1234567" required>
+                        </div>
+                                                <div class="input-group">
+                            <label>گھر کا پتہ</label>
+                            <input type="text" name="address" placeholder="گھر کا پتہ درج کریں" required>
+                        </div>
+                        <div class="input-group">
+                            <label>شہر منتخب کریں</label>
+                            <select name="city" required>
+                                <option value="">-- شہر منتخب کریں --</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="productName" value="B.p Fitness">
+                        <button type="submit" class="btn-large">آرڈر مکمل کریں</button>
+                    </form>
+            </div>
+        </section>
 
         <!-- Benefits Section -->
         <section id="benefits" class="benefits" style="padding-top: 2rem;">
