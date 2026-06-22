@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // Load cities into dropdown
-  const citySelect = document.getElementById('city');
-  if (citySelect) {
+  const citySelects = document.querySelectorAll('select[name="city"]');
+  if (citySelects.length > 0) {
     const tryFetch = (paths) => {
       if (!paths.length) return;
       fetch(paths[0])
         .then(r => { if (!r.ok) throw new Error(); return r.json(); })
         .then(cities => {
           cities.forEach(c => {
-            const opt = document.createElement('option');
-            opt.value = c; opt.textContent = c;
-            citySelect.appendChild(opt);
+            citySelects.forEach(select => {
+              const opt = document.createElement('option');
+              opt.value = c; opt.textContent = c;
+              select.appendChild(opt.cloneNode(true));
+            });
           });
         })
         .catch(() => tryFetch(paths.slice(1)));
@@ -21,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Order Form Submit
-  const orderForm = document.getElementById('orderForm');
-  if (orderForm) {
+  const orderForms = document.querySelectorAll('form[id="orderForm"], form.quickOrderForm');
+  orderForms.forEach(orderForm => {
     orderForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const fd = new FormData(e.target);
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
       }
     });
-  }
+  });
 
   // Discount Spinner
   const spinner = document.getElementById('spinner');
@@ -148,8 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Searchable city dropdown utility
 function initSearchableCities() {
-  const citySelect = document.getElementById('city');
-  if (!citySelect) return;
+  const citySelects = document.querySelectorAll('select[name="city"]');
+  if (citySelects.length === 0) return;
 
   // 1. Inject Styles dynamically if not already injected
   if (!document.getElementById('searchable-select-styles')) {
@@ -273,6 +275,7 @@ function initSearchableCities() {
     document.head.appendChild(styles);
   }
 
+  citySelects.forEach(citySelect => {
   // 2. Hide original select
   citySelect.style.display = 'none';
 
@@ -428,4 +431,5 @@ function initSearchableCities() {
     rebuildOptions();
   });
   observer.observe(citySelect, { childList: true, subtree: true });
+  });
 }
